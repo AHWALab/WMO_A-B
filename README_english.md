@@ -1,4 +1,4 @@
-# EF5 — Workshop for Antigua and Barbuda
+# EF5 — Antigua and Barbuda Training (standalone Docker workspace)
 
 Standalone EF5 setup for Antigua and Barbuda at **30 m only**. It runs the
 flood model through a Docker container while **TITO_AntiguaTraining stays
@@ -8,25 +8,23 @@ run layout differs.
 There is **one resolution (30 m)** and **one control file**:
 `conf/control_30m.txt`.
 
----
-
 ## Folder layout
 
 ```text
 EF5_AntiguaTraining/
-├── data/                        → mounted as /data (model inputs, read/write)
+├── data/                        → mounted as /data  (model inputs, read/write)
 │   ├── basic/                   DEM, flow direction (DDM), flow accumulation (FAM)
 │   │   └── DEM_antigua_30m.tif / FDIR_antigua_30m.tif / FAC_antigua_30m.tif
 │   ├── parameters/
 │   │   ├── CREST_Antigua_30m/
 │   │   └── KW_Antigua_30m/
-│   ├── pet/                     PET climatology PET.01.tif … PET.12.tif
+│   ├── pet/                     PET.01.tif … PET.12.tif climatology
 │   ├── states/
-│   │   └── 30m/                 warm-start states (crest_SM, kwr_*)
+│   │   └── 30m/                 warm-start states for 30 m (crest_SM, kwr_*)
 │   └── precip/                  IMERG forcing: imerg.qpe.YYYYMMDDHHUU.30minAccum.tif
 ├── output/                      → mounted as /output (EF5 results)
 │   └── 30m/                     results — 30 m domain run
-├── conf/                        → mounted as /conf (control files, read-only)
+├── conf/                        → mounted as /conf  (control files, read-only)
 │   ├── control_30m.txt          the only control file — Antigua and Barbuda 30 m
 │   └── basin_list/
 │       └── Antigua_30m_basin_new.txt
@@ -35,44 +33,38 @@ EF5_AntiguaTraining/
 │   ├── build_ef5.sh             build/reuse (Linux & macOS)
 │   ├── build_ef5.cmd            build/reuse (Windows CMD — no PowerShell)
 │   └── ef5-container.tar        prebuilt image archive (Git LFS / offline reuse)
-├── docker-compose.yml           cross-platform launcher (Linux, macOS and Windows)
+├── docker-compose.yml           cross-platform launcher (works on all 3 OSes)
 ├── run_ef5.sh                   run EF5 (Linux / macOS / WSL)
 ├── run_ef5.cmd                  run EF5 (Windows CMD — no PowerShell)
-├── README_english.md            English version
+├── README_english.md
 └── README.md
 ```
 
----
-
 ## How the container accesses the folders
 
-`run_ef5.sh`, `run_ef5.cmd` and `docker-compose.yml` bind-mount the three
-main folders into the container and run EF5 from the container root, so every
-path in the control file is relative to `/`.
+`run_ef5.sh` / `run_ef5.cmd` / `docker-compose.yml` bind-mount the three
+folders into the container and run EF5 from the container root, so every path
+in the control file is relative to `/`:
 
-| Host folder | Container path | Used for |
-|-------------|----------------|----------|
-| `./data` | `/data` | Inputs: basic, parameters, pet, states, precip |
-| `./output` | `/output` | EF5 results (maxq, maxunitq, `ts.*.tif`, logs, CSV) |
-| `./conf` | `/conf` | EF5 control files |
-
----
+| Host folder | Container path | Used for                                         |
+| ----------- | -------------- | ------------------------------------------------ |
+| `./data`    | `/data`        | basic, parameters, pet, states, precip           |
+| `./output`  | `/output`      | EF5 outputs (maxq/maxunitq/ts.\*.tif, logs, csv) |
+| `./conf`    | `/conf`        | EF5 control files                                |
 
 ## Build or reuse the image
 
-### Linux / macOS
+**Linux / macOS** — `docker/build_ef5.sh`:
 
 ```bash
 ./docker/build_ef5.sh                 # reuse existing image / load archive / build
-./docker/build_ef5.sh --status        # show which image will be used
+./docker/build_ef5.sh --status        # what will be used
 ./docker/build_ef5.sh --rebuild       # compile from source (needs internet)
-./docker/build_ef5.sh --load          # load docker/ef5-container.tar
-./docker/build_ef5.sh --save          # save the current image to docker/ef5-container.tar
+./docker/build_ef5.sh --load          # load prebuilt docker/ef5-container.tar
+./docker/build_ef5.sh --save          # snapshot current image → docker/ef5-container.tar
 ```
 
-### Windows (Command Prompt / CMD)
-
-CMD only, **no PowerShell**:
+**Windows (Command Prompt)** — pure CMD, no PowerShell:
 
 ```bat
 docker\build_ef5.cmd
@@ -82,11 +74,9 @@ docker\build_ef5.cmd -Rebuild
 docker\build_ef5.cmd -Save
 ```
 
-Reuse order:
-
-1. Local image already loaded.
-2. Archive `docker/ef5-container.tar` (needs `git lfs pull` if cloned from GitHub).
-3. Build from `docker/Dockerfile` (clones AHWALab/EF5 and compiles; a few minutes).
+Reuse order: already-loaded local image → `docker/ef5-container.tar` archive
+(needs `git lfs pull` after a GitHub clone) → build from `docker/Dockerfile`
+(clones AHWALab/EF5 and compiles, a few minutes).
 
 After clone, check the tar is real (~318 MB), not a 134-byte LFS pointer:
 
@@ -95,14 +85,12 @@ dir docker\ef5-container.tar
 git lfs pull
 ```
 
----
-
 ## Run EF5
 
 There is a single control file. If none is passed, the default is
 `conf/control_30m.txt`.
 
-### Linux / macOS / WSL
+**Linux / macOS / WSL:**
 
 ```bash
 ./run_ef5.sh                            # 30 m  → output/30m/
@@ -110,9 +98,7 @@ There is a single control file. If none is passed, the default is
 ./run_ef5.sh --bash                     # interactive shell in the container
 ```
 
-### Windows (CMD)
-
-Prefer a **local** path (e.g. `C:\...`), not a mapped network drive:
+**Windows (Command Prompt)** — prefer a **local** path (e.g. `C:\...`), not a mapped network drive:
 
 ```bat
 run_ef5.cmd
@@ -120,46 +106,37 @@ run_ef5.cmd -Control control_30m.txt
 run_ef5.cmd -Bash
 ```
 
-| Platform | Example |
-|----------|---------|
-| Linux / WSL / macOS | `./run_ef5.sh conf/control_30m.txt` |
-| Windows (CMD) | `run_ef5.cmd -Control control_30m.txt` |
-| Any OS | `docker compose run --rm ef5 /ef5/bin/ef5 /conf/control_30m.txt` |
+| Platform            | Example                                                           |
+| ------------------- | ----------------------------------------------------------------- |
+| Linux / WSL / macOS | `./run_ef5.sh conf/control_30m.txt`                               |
+| Windows (CMD)       | `run_ef5.cmd -Control control_30m.txt`                            |
+| Any OS              | `docker compose run --rm ef5 /ef5/bin/ef5 /conf/control_30m.txt`  |
 
-On macOS (Docker Desktop) there is no host networking, so `run_ef5.sh`
-automatically uses `docker compose`.
-
----
+macOS (Docker Desktop) has no host networking, so `run_ef5.sh` automatically
+delegates to `docker compose` there.
 
 ## Control file and outputs
 
 | Control | Resolution | Purpose | Output folder | States |
-|---------|------------|---------|---------------|--------|
+| ------- | ---------- | ------- | ------------- | ------ |
 | `conf/control_30m.txt` | 30 m | Antigua and Barbuda domain | `./output/30m/` | `data/states/30m/` |
 
-The basin / gauge list (reference) is in `conf/basin_list/Antigua_30m_basin_new.txt`.
+Basin / gauge source list (reference) lives under
+`conf/basin_list/Antigua_30m_basin_new.txt`.
 
-Outputs include `maxq`, `maxunitq`, accumulated precipitation (and soil moisture
-when enabled) grids.
+Includes `maxq` / `maxunitq` / precip-accum grids (and soil moisture where
+enabled).
 
-Before a run with precipitation, place IMERG GeoTIFFs in:
-
-```text
-data/precip/
-```
-
-named `imerg.qpe.YYYYMMDDHHUU.30minAccum.tif`. Missing files are treated as
-**zero** precipitation.
+Populate `data/precip/` with IMERG GeoTIFFs named
+`imerg.qpe.YYYYMMDDHHUU.30minAccum.tif` before a run with precipitation;
+missing files are treated as zero precipitation.
 
 The example window in `conf/control_30m.txt` is `TIME_BEGIN=202510070800` to
 `TIME_END=202510110000`. Edit those lines for a different simulation period.
 
----
-
 ## Windows notes
 
-- Use **Command Prompt (CMD)** with `run_ef5.cmd` / `docker\build_ef5.cmd`
-  (there are no PowerShell scripts).
+- Use **Command Prompt** with `run_ef5.cmd` / `docker\build_ef5.cmd` (no PowerShell scripts).
 - **Docker bind mounts** from mapped network drives (`X:`) often fail or appear
   empty inside the container. Copy the repo to a **local** folder first:
 
