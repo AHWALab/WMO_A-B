@@ -343,10 +343,11 @@ def build_shared_precip(config, regions, region_cycle_times, region_qpe, region_
     for region in regions:
         ct = region_cycle_times[region]
         ck = ct.strftime("%Y%m%d%H%M")
-        qpe = str(region_qpe.get(region, "")).upper()
-        qpf_list = [str(s).upper() for s in region_qpf.get(region, [])]
+        from tito_utils.ef5.jobs.helpers import as_source_list, has_source
+        qpes = as_source_list(region_qpe.get(region, ""))
+        qpf_list = as_source_list(region_qpf.get(region, []))
 
-        if qpe == "STREAM_SAT":
+        if has_source(qpes, "STREAM_SAT"):
             tif_root = root / "EF5_conf" / "precip" / "stream_sat" / "caribbean"
             if not tif_root.is_dir():
                 tif_root = root / "EF5_conf" / "precip" / "stream_sat"
@@ -356,7 +357,7 @@ def build_shared_precip(config, regions, region_cycle_times, region_qpe, region_
                 "domain": "caribbean",
                 "offline": True,
             }
-        if qpe == "IMERG":
+        if has_source(qpes, "IMERG"):
             # Prefer cycle shared folder; fall back to flat imerg/
             shared = root / "EF5_conf" / "precip" / "imerg" / "_shared" / ck
             flat = root / "EF5_conf" / "precip" / "imerg"

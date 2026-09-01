@@ -118,7 +118,7 @@ qpf_source = "STORMLAB"
 #     "Comoros":   {"qpe_source": "HSAF",   "qpf_source": "WRF"},  # Africa — HSAF
 # }
 region_forcing_map = {
-    "Antigua": {"qpe_source": "IMERG", "qpf_source": "AROME"},
+    "Antigua": {"qpe_source": "STREAM_SAT", "qpf_source": "STORMLAB"},
 }
 
 # Deterministic IMERG path folders (optional overrides)
