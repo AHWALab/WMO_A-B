@@ -1,0 +1,71 @@
+# IBF receptor product: Guatemala, Santa Ines Petapa FIM window.
+#
+# Consumes the probability grids written by fim_utils.pipeline_pf
+# (prob_depth_ge_{tag}.{cycle}.tif) or the legacy qpeprob naming, and the
+# nationally preloaded Overture receptors from the IBF team's package.
+# Paths resolve against the repo root (or --root / TITO_FIM_ROOT).
+region: Guatemala_SantaInesPetapa
+
+receptors:
+  buildings:
+    # national preload (IBFv1.0 package): 6.3 GB, read bbox-filtered only
+    source: ../IBFv10_Guatemala/input_data/guatemala_overture/guatemala_overture_bld_rds.gpkg
+    layer: guatemala_overture_buildings
+    id_field: id
+    subtype_field: subtype
+  roads:
+    source: ../IBFv10_Guatemala/input_data/guatemala_overture/guatemala_overture_bld_rds.gpkg
+    layer: guatemala_overture_roads
+    id_field: id
+    class_field: class
+    keep_classes: [motorway, trunk, primary, secondary, tertiary, residential]
+  admin:
+    source: ../IBFv10_Guatemala/input_data/Guatemala_municipios_Pop_Vuln.shp
+    id_field: CODIGO
+    name_field: MUNICIPIO
+    population_field: "Población"
+  land_use:
+    source: ../IBFv10_Guatemala/input_data/Guatemala_GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10_V1_0.tif
+  work_crs: "EPSG:32615"
+  domain_buffer_m: 250
+  cache_dir: outputs/ibf_cache
+  critical_subtypes: [medical, education, civic]
+  # IBFv1.0 dasymetric defaults
+  land_class_weights: {0: 0.1, 1: 0.9, 2: 0.0}
+  subtype_weights: {residential: 1.0}
+
+fim_products:
+  # pipeline_pf writes outputs/fim/<region>/{cycle}/<mode>/ in dev runs;
+  # in orchestrated runs tito_hook overrides with the cycle-first path.
+  root: outputs/fim/Guatemala_SantaInesPetapa/{cycle}/{mode}
+  mode: combined
+  prefer_overbank: false
+
+classification:
+  # NOTE: in orchestrated runs the ibf_regions block in
+  # Caribbean_Comoros_config.py OVERRIDES severity_thresholds_m,
+  # hazard_flag_cutoff and reporting_threshold, so operators normally edit
+  # them there. The values below apply to manual pipeline_ibf runs and to
+  # regions not listed in ibf_regions.
+  # FGS likelihood bands, identical to fim_utils.probability defaults
+  likelihood_bands:
+    very_low: [0.0, 0.2]
+    low: [0.2, 0.4]
+    medium: [0.4, 0.6]
+    high: [0.6, 1.01]
+  reporting_threshold: 0.05
+  # potential-impact severity axis (depth a receptor must see);
+  # each is served by the closest available probability grid and the
+  # substitution is recorded in ibf_summary.json. Project default, same
+  # for every country: 10 / 30 / 70 cm (the first three FIM thresholds).
+  # The IBF team's legacy rasters used 0.76 m for severe; the matcher
+  # still picks a 76cm grid for the 0.70 target when that is what exists.
+  severity_thresholds_m:
+    minor: 0.10
+    significant: 0.30
+    severe: 0.70
+  hazard_flag_cutoff: 0.50    # user default; IBFv1.0 used 0.30
+
+outputs:
+  root: outputs/ibf/{region}
+  append_cycle: true

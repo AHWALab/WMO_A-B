@@ -1,0 +1,1401 @@
+unit_code,unit_name,storm_id,pcpout_mm_v1_2,rain_geotiff_mm_v1_6,diff_mm,rel_diff_pct
+AG01,Barbuda,sample_0001,958.8,961.61,2.81,0.29
+AG01,Barbuda,sample_0002,0.0,0.15,0.15,
+AG01,Barbuda,sample_0003,0.0,0.59,0.59,
+AG01,Barbuda,sample_0004,0.3,1.12,0.82,270.47
+AG01,Barbuda,sample_0005,0.58,2.09,1.52,263.26
+AG01,Barbuda,sample_0006,0.0,1.46,1.46,
+AG01,Barbuda,sample_0007,1.06,3.26,2.2,207.23
+AG01,Barbuda,sample_0008,4.49,6.65,2.16,47.97
+AG01,Barbuda,sample_0009,14.93,17.7,2.77,18.54
+AG01,Barbuda,sample_0010,9.96,11.72,1.76,17.7
+AG01,Barbuda,sample_0011,11.24,13.4,2.16,19.19
+AG01,Barbuda,sample_0012,0.0,0.14,0.14,
+AG01,Barbuda,sample_0013,0.0,2.49,2.49,
+AG01,Barbuda,sample_0014,13.8,15.85,2.05,14.84
+AG01,Barbuda,sample_0015,27.26,30.03,2.77,10.15
+AG01,Barbuda,sample_0016,0.0,0.35,0.35,
+AG01,Barbuda,sample_0017,12.0,15.62,3.61,30.11
+AG01,Barbuda,sample_0018,35.42,41.87,6.45,18.2
+AG01,Barbuda,sample_0019,27.26,30.43,3.16,11.6
+AG01,Barbuda,sample_0020,35.59,38.15,2.56,7.2
+AG01,Barbuda,sample_0021,31.06,35.8,4.75,15.29
+AG01,Barbuda,sample_0022,34.4,38.74,4.34,12.62
+AG01,Barbuda,sample_0023,0.0,0.0,0.0,
+AG01,Barbuda,sample_0024,32.95,37.62,4.67,14.16
+AG01,Barbuda,sample_0025,58.5,62.36,3.86,6.6
+AG01,Barbuda,sample_0026,3.95,5.65,1.71,43.24
+AG01,Barbuda,sample_0027,58.08,61.22,3.14,5.4
+AG01,Barbuda,sample_0028,52.97,60.63,7.67,14.48
+AG01,Barbuda,sample_0029,4.93,9.65,4.72,95.63
+AG01,Barbuda,sample_0030,98.93,104.48,5.55,5.61
+AG01,Barbuda,sample_0031,114.75,119.91,5.16,4.5
+AG01,Barbuda,sample_0032,96.9,102.06,5.16,5.32
+AG01,Barbuda,sample_0033,92.13,96.05,3.92,4.26
+AG01,Barbuda,sample_0034,91.2,96.47,5.27,5.77
+AG01,Barbuda,sample_0035,105.58,108.52,2.94,2.79
+AG01,Barbuda,sample_0036,95.08,100.72,5.64,5.94
+AG01,Barbuda,sample_0037,96.56,101.67,5.1,5.29
+AG01,Barbuda,sample_0038,21.07,23.46,2.39,11.36
+AG01,Barbuda,sample_0039,117.22,119.38,2.16,1.84
+AG01,Barbuda,sample_0040,95.28,103.62,8.34,8.75
+AG01,Barbuda,sample_0041,99.99,109.52,9.52,9.52
+AG01,Barbuda,sample_0042,101.72,107.27,5.56,5.46
+AG01,Barbuda,sample_0043,146.0,154.59,8.59,5.89
+AG01,Barbuda,sample_0044,150.41,152.19,1.78,1.18
+AG01,Barbuda,sample_0045,122.65,125.5,2.85,2.32
+AG01,Barbuda,sample_0046,149.55,155.88,6.33,4.23
+AG01,Barbuda,sample_0047,132.87,133.87,1.0,0.75
+AG01,Barbuda,sample_0048,129.05,133.57,4.53,3.51
+AG01,Barbuda,sample_0049,144.3,145.89,1.6,1.11
+AG01,Barbuda,sample_0050,137.79,140.69,2.89,2.1
+AG01,Barbuda,sample_0051,167.36,190.31,22.95,13.71
+AG01,Barbuda,sample_0052,178.16,184.25,6.1,3.42
+AG01,Barbuda,sample_0053,145.28,148.98,3.7,2.54
+AG01,Barbuda,sample_0054,132.11,142.97,10.86,8.22
+AG01,Barbuda,sample_0055,158.76,164.84,6.08,3.83
+AG01,Barbuda,sample_0056,11.19,13.45,2.26,20.23
+AG01,Barbuda,sample_0057,225.0,228.82,3.82,1.7
+AG01,Barbuda,sample_0058,173.63,181.9,8.27,4.76
+AG01,Barbuda,sample_0059,205.66,207.81,2.15,1.04
+AG01,Barbuda,sample_0060,162.4,165.81,3.41,2.1
+AG01,Barbuda,sample_0061,197.73,204.88,7.14,3.61
+AG01,Barbuda,sample_0062,174.86,179.14,4.28,2.45
+AG01,Barbuda,sample_0063,120.72,124.93,4.21,3.49
+AG01,Barbuda,sample_0064,11.53,15.53,4.0,34.74
+AG01,Barbuda,sample_0065,248.25,263.38,15.13,6.1
+AG01,Barbuda,sample_0066,195.03,200.21,5.17,2.65
+AG01,Barbuda,sample_0067,166.27,169.13,2.86,1.72
+AG01,Barbuda,sample_0068,191.99,195.21,3.22,1.68
+AG01,Barbuda,sample_0069,192.41,199.9,7.48,3.89
+AG01,Barbuda,sample_0070,160.54,161.77,1.23,0.77
+AG01,Barbuda,sample_0071,231.41,236.09,4.68,2.02
+AG01,Barbuda,sample_0072,214.87,216.72,1.85,0.86
+AG01,Barbuda,sample_0073,186.71,195.03,8.32,4.45
+AG01,Barbuda,sample_0074,208.37,213.59,5.22,2.51
+AG01,Barbuda,sample_0075,212.89,216.23,3.33,1.57
+AG01,Barbuda,sample_0076,191.35,196.34,4.99,2.61
+AG01,Barbuda,sample_0077,242.52,244.82,2.3,0.95
+AG01,Barbuda,sample_0078,197.3,203.26,5.96,3.02
+AG01,Barbuda,sample_0079,253.35,258.74,5.38,2.13
+AG01,Barbuda,sample_0080,224.43,238.23,13.8,6.15
+AG01,Barbuda,sample_0081,215.63,221.13,5.5,2.55
+AG01,Barbuda,sample_0082,201.86,208.59,6.72,3.33
+AG01,Barbuda,sample_0083,267.37,269.76,2.39,0.89
+AG01,Barbuda,sample_0084,239.5,245.33,5.83,2.44
+AG01,Barbuda,sample_0085,295.13,298.6,3.47,1.18
+AG01,Barbuda,sample_0086,130.06,136.96,6.89,5.3
+AG01,Barbuda,sample_0087,222.29,226.75,4.46,2.01
+AG01,Barbuda,sample_0088,200.12,206.09,5.96,2.98
+AG01,Barbuda,sample_0089,241.39,248.49,7.1,2.94
+AG01,Barbuda,sample_0090,258.16,263.58,5.42,2.1
+AG01,Barbuda,sample_0091,238.76,244.05,5.29,2.21
+AG01,Barbuda,sample_0092,250.35,261.73,11.38,4.55
+AG01,Barbuda,sample_0093,240.76,250.05,9.29,3.86
+AG01,Barbuda,sample_0094,4.21,5.77,1.56,37.09
+AG01,Barbuda,sample_0095,289.86,295.67,5.8,2.0
+AG01,Barbuda,sample_0096,290.95,298.72,7.77,2.67
+AG01,Barbuda,sample_0097,231.54,236.71,5.17,2.23
+AG01,Barbuda,sample_0098,304.35,311.18,6.84,2.25
+AG01,Barbuda,sample_0099,225.24,238.18,12.94,5.75
+AG01,Barbuda,sample_0100,280.77,282.1,1.32,0.47
+AG01,Barbuda,sample_0101,294.07,301.22,7.15,2.43
+AG01,Barbuda,sample_0102,255.3,265.09,9.79,3.83
+AG01,Barbuda,sample_0103,306.59,310.95,4.37,1.42
+AG01,Barbuda,sample_0104,296.31,302.64,6.33,2.14
+AG01,Barbuda,sample_0105,302.19,305.46,3.27,1.08
+AG01,Barbuda,sample_0106,264.89,272.25,7.36,2.78
+AG01,Barbuda,sample_0107,401.11,401.92,0.81,0.2
+AG01,Barbuda,sample_0108,314.88,321.54,6.66,2.11
+AG01,Barbuda,sample_0109,141.44,149.69,8.25,5.83
+AG01,Barbuda,sample_0110,306.63,315.36,8.72,2.84
+AG01,Barbuda,sample_0111,331.33,331.32,-0.01,-0.0
+AG01,Barbuda,sample_0112,350.06,355.34,5.28,1.51
+AG01,Barbuda,sample_0113,314.99,318.25,3.26,1.03
+AG01,Barbuda,sample_0114,324.03,332.38,8.35,2.58
+AG01,Barbuda,sample_0115,297.84,302.19,4.34,1.46
+AG01,Barbuda,sample_0116,337.32,343.89,6.57,1.95
+AG01,Barbuda,sample_0117,304.06,304.49,0.42,0.14
+AG01,Barbuda,sample_0118,340.91,346.92,6.0,1.76
+AG01,Barbuda,sample_0119,299.32,307.0,7.67,2.56
+AG01,Barbuda,sample_0120,424.82,427.01,2.19,0.52
+AG01,Barbuda,sample_0121,315.9,324.87,8.97,2.84
+AG01,Barbuda,sample_0122,333.38,341.5,8.12,2.44
+AG01,Barbuda,sample_0123,404.03,409.26,5.22,1.29
+AG01,Barbuda,sample_0124,335.59,339.68,4.09,1.22
+AG01,Barbuda,sample_0125,340.22,340.41,0.2,0.06
+AG01,Barbuda,sample_0126,400.76,404.5,3.74,0.93
+AG01,Barbuda,sample_0127,389.74,396.82,7.09,1.82
+AG01,Barbuda,sample_0128,395.04,398.54,3.5,0.89
+AG01,Barbuda,sample_0129,350.83,357.78,6.95,1.98
+AG01,Barbuda,sample_0130,418.36,420.8,2.44,0.58
+AG01,Barbuda,sample_0131,352.96,358.44,5.47,1.55
+AG01,Barbuda,sample_0132,376.03,381.81,5.78,1.54
+AG01,Barbuda,sample_0133,328.55,338.09,9.54,2.9
+AG01,Barbuda,sample_0134,338.67,348.9,10.23,3.02
+AG01,Barbuda,sample_0135,333.42,338.78,5.36,1.61
+AG01,Barbuda,sample_0136,432.62,438.04,5.42,1.25
+AG01,Barbuda,sample_0137,167.45,169.25,1.8,1.08
+AG01,Barbuda,sample_0138,428.0,432.26,4.26,1.0
+AG01,Barbuda,sample_0139,289.35,294.26,4.91,1.7
+AG01,Barbuda,sample_0140,384.35,387.77,3.42,0.89
+AG01,Barbuda,sample_0141,391.33,397.34,6.01,1.54
+AG01,Barbuda,sample_0142,392.4,398.32,5.92,1.51
+AG01,Barbuda,sample_0143,399.72,405.77,6.05,1.51
+AG01,Barbuda,sample_0144,448.04,450.93,2.89,0.64
+AG01,Barbuda,sample_0145,294.24,300.54,6.29,2.14
+AG01,Barbuda,sample_0146,413.25,416.81,3.56,0.86
+AG01,Barbuda,sample_0147,326.9,329.63,2.73,0.84
+AG01,Barbuda,sample_0148,390.94,396.46,5.52,1.41
+AG01,Barbuda,sample_0149,429.49,424.39,-5.1,-1.19
+AG01,Barbuda,sample_0150,409.29,417.65,8.36,2.04
+AG01,Barbuda,sample_0151,440.32,443.49,3.17,0.72
+AG01,Barbuda,sample_0152,415.33,420.6,5.26,1.27
+AG01,Barbuda,sample_0153,434.0,435.41,1.41,0.32
+AG01,Barbuda,sample_0154,438.91,445.62,6.7,1.53
+AG01,Barbuda,sample_0155,433.86,441.75,7.89,1.82
+AG01,Barbuda,sample_0156,366.25,367.18,0.93,0.25
+AG01,Barbuda,sample_0157,434.68,439.98,5.3,1.22
+AG01,Barbuda,sample_0158,398.78,403.89,5.12,1.28
+AG01,Barbuda,sample_0159,447.64,446.51,-1.13,-0.25
+AG01,Barbuda,sample_0160,448.24,452.95,4.71,1.05
+AG01,Barbuda,sample_0161,501.73,504.49,2.75,0.55
+AG01,Barbuda,sample_0162,483.35,488.77,5.43,1.12
+AG01,Barbuda,sample_0163,525.29,531.47,6.18,1.18
+AG01,Barbuda,sample_0164,445.49,450.43,4.94,1.11
+AG01,Barbuda,sample_0165,491.73,490.68,-1.05,-0.21
+AG01,Barbuda,sample_0166,497.41,496.22,-1.19,-0.24
+AG01,Barbuda,sample_0167,489.1,490.94,1.84,0.38
+AG01,Barbuda,sample_0168,489.1,490.94,1.84,0.38
+AG01,Barbuda,sample_0169,470.34,471.55,1.21,0.26
+AG01,Barbuda,sample_0170,498.69,497.67,-1.03,-0.21
+AG01,Barbuda,sample_0171,447.4,448.31,0.91,0.2
+AG01,Barbuda,sample_0172,489.72,492.0,2.28,0.47
+AG01,Barbuda,sample_0173,573.48,576.93,3.45,0.6
+AG01,Barbuda,sample_0174,513.69,513.05,-0.63,-0.12
+AG01,Barbuda,sample_0175,456.36,462.03,5.67,1.24
+AG01,Barbuda,sample_0176,506.45,511.38,4.93,0.97
+AG01,Barbuda,sample_0177,485.74,489.21,3.48,0.72
+AG01,Barbuda,sample_0178,511.68,512.38,0.7,0.14
+AG01,Barbuda,sample_0179,646.19,648.91,2.72,0.42
+AG01,Barbuda,sample_0180,662.86,665.98,3.11,0.47
+AG01,Barbuda,sample_0181,571.56,574.32,2.77,0.48
+AG01,Barbuda,sample_0182,612.11,616.36,4.25,0.69
+AG01,Barbuda,sample_0183,595.97,599.16,3.19,0.54
+AG01,Barbuda,sample_0184,576.66,580.41,3.75,0.65
+AG01,Barbuda,sample_0185,558.67,564.45,5.78,1.04
+AG01,Barbuda,sample_0186,600.67,604.54,3.87,0.65
+AG01,Barbuda,sample_0187,609.14,611.51,2.37,0.39
+AG01,Barbuda,sample_0188,645.61,648.78,3.17,0.49
+AG01,Barbuda,sample_0189,624.79,623.97,-0.82,-0.13
+AG01,Barbuda,sample_0190,537.59,542.47,4.88,0.91
+AG01,Barbuda,sample_0191,597.55,602.77,5.22,0.87
+AG01,Barbuda,sample_0192,687.35,688.74,1.4,0.2
+AG01,Barbuda,sample_0193,515.82,517.38,1.56,0.3
+AG01,Barbuda,sample_0194,868.55,869.5,0.95,0.11
+AG01,Barbuda,sample_0195,741.94,747.34,5.4,0.73
+AG01,Barbuda,sample_0196,884.5,889.49,4.99,0.56
+AG01,Barbuda,sample_0197,886.06,885.53,-0.53,-0.06
+AG01,Barbuda,sample_0198,987.47,989.86,2.39,0.24
+AG01,Barbuda,sample_0199,918.33,920.27,1.94,0.21
+AG01,Barbuda,sample_0200,957.04,957.4,0.36,0.04
+AG03,Saint George,sample_0001,1023.45,1027.76,4.32,0.42
+AG03,Saint George,sample_0002,0.0,0.1,0.1,
+AG03,Saint George,sample_0003,0.0,0.0,0.0,
+AG03,Saint George,sample_0004,0.0,0.39,0.39,
+AG03,Saint George,sample_0005,0.0,1.55,1.55,
+AG03,Saint George,sample_0006,0.0,0.56,0.56,
+AG03,Saint George,sample_0007,0.01,2.53,2.52,32367.87
+AG03,Saint George,sample_0008,3.87,6.26,2.39,61.68
+AG03,Saint George,sample_0009,0.0,1.79,1.79,
+AG03,Saint George,sample_0010,0.82,3.38,2.55,310.85
+AG03,Saint George,sample_0011,0.0,0.25,0.25,
+AG03,Saint George,sample_0012,2.0,4.77,2.76,137.86
+AG03,Saint George,sample_0013,1.96,7.03,5.07,258.57
+AG03,Saint George,sample_0014,12.86,18.64,5.77,44.88
+AG03,Saint George,sample_0015,21.44,28.08,6.65,31.0
+AG03,Saint George,sample_0016,4.06,5.45,1.39,34.17
+AG03,Saint George,sample_0017,4.17,6.81,2.64,63.42
+AG03,Saint George,sample_0018,15.85,20.43,4.58,28.86
+AG03,Saint George,sample_0019,15.52,20.43,4.91,31.62
+AG03,Saint George,sample_0020,5.86,10.97,5.12,87.39
+AG03,Saint George,sample_0021,0.0,0.26,0.26,
+AG03,Saint George,sample_0022,0.0,0.4,0.4,
+AG03,Saint George,sample_0023,0.0,2.72,2.72,
+AG03,Saint George,sample_0024,0.0,2.09,2.09,
+AG03,Saint George,sample_0025,60.22,63.92,3.7,6.15
+AG03,Saint George,sample_0026,63.69,67.36,3.67,5.77
+AG03,Saint George,sample_0027,30.58,31.74,1.17,3.81
+AG03,Saint George,sample_0028,33.12,39.06,5.94,17.95
+AG03,Saint George,sample_0029,2.33,4.22,1.89,81.2
+AG03,Saint George,sample_0030,2.96,3.22,0.26,8.87
+AG03,Saint George,sample_0031,18.13,22.23,4.1,22.62
+AG03,Saint George,sample_0032,0.0,0.58,0.58,
+AG03,Saint George,sample_0033,0.01,1.19,1.18,15157.84
+AG03,Saint George,sample_0034,0.81,4.72,3.91,481.89
+AG03,Saint George,sample_0035,96.67,100.09,3.41,3.53
+AG03,Saint George,sample_0036,126.27,127.85,1.58,1.25
+AG03,Saint George,sample_0037,0.0,0.16,0.16,
+AG03,Saint George,sample_0038,81.64,86.18,4.54,5.56
+AG03,Saint George,sample_0039,131.29,136.5,5.21,3.96
+AG03,Saint George,sample_0040,50.34,56.57,6.23,12.38
+AG03,Saint George,sample_0041,0.0,0.67,0.67,
+AG03,Saint George,sample_0042,153.95,154.15,0.2,0.13
+AG03,Saint George,sample_0043,152.85,161.04,8.19,5.36
+AG03,Saint George,sample_0044,82.69,92.93,10.24,12.38
+AG03,Saint George,sample_0045,154.09,157.52,3.43,2.23
+AG03,Saint George,sample_0046,0.0,0.17,0.17,
+AG03,Saint George,sample_0047,111.48,121.52,10.04,9.0
+AG03,Saint George,sample_0048,64.53,68.05,3.52,5.46
+AG03,Saint George,sample_0049,106.47,115.84,9.37,8.8
+AG03,Saint George,sample_0050,110.82,119.91,9.09,8.21
+AG03,Saint George,sample_0051,128.78,132.99,4.21,3.27
+AG03,Saint George,sample_0052,109.91,116.95,7.04,6.41
+AG03,Saint George,sample_0053,119.21,130.11,10.9,9.14
+AG03,Saint George,sample_0054,130.63,135.83,5.2,3.98
+AG03,Saint George,sample_0055,141.24,148.91,7.66,5.42
+AG03,Saint George,sample_0056,94.25,101.11,6.86,7.27
+AG03,Saint George,sample_0057,142.03,143.85,1.82,1.28
+AG03,Saint George,sample_0058,93.45,105.15,11.7,12.52
+AG03,Saint George,sample_0059,129.94,134.48,4.54,3.5
+AG03,Saint George,sample_0060,98.82,104.42,5.6,5.67
+AG03,Saint George,sample_0061,121.9,126.24,4.34,3.56
+AG03,Saint George,sample_0062,113.13,119.16,6.03,5.33
+AG03,Saint George,sample_0063,113.67,119.29,5.62,4.95
+AG03,Saint George,sample_0064,3.84,6.62,2.78,72.19
+AG03,Saint George,sample_0065,171.46,179.16,7.71,4.49
+AG03,Saint George,sample_0066,127.15,133.43,6.28,4.94
+AG03,Saint George,sample_0067,181.09,183.45,2.36,1.3
+AG03,Saint George,sample_0068,102.06,108.63,6.57,6.44
+AG03,Saint George,sample_0069,171.8,179.45,7.65,4.45
+AG03,Saint George,sample_0070,154.39,161.35,6.96,4.51
+AG03,Saint George,sample_0071,195.02,190.52,-4.5,-2.31
+AG03,Saint George,sample_0072,0.16,1.15,0.99,639.19
+AG03,Saint George,sample_0073,182.26,196.79,14.52,7.97
+AG03,Saint George,sample_0074,183.69,185.06,1.37,0.74
+AG03,Saint George,sample_0075,272.79,283.38,10.59,3.88
+AG03,Saint George,sample_0076,230.26,242.9,12.65,5.49
+AG03,Saint George,sample_0077,242.16,245.4,3.24,1.34
+AG03,Saint George,sample_0078,233.51,233.54,0.03,0.01
+AG03,Saint George,sample_0079,126.97,134.25,7.28,5.73
+AG03,Saint George,sample_0080,257.28,258.49,1.21,0.47
+AG03,Saint George,sample_0081,149.85,150.56,0.71,0.48
+AG03,Saint George,sample_0082,316.92,320.99,4.07,1.29
+AG03,Saint George,sample_0083,191.76,201.16,9.4,4.9
+AG03,Saint George,sample_0084,291.59,293.41,1.82,0.62
+AG03,Saint George,sample_0085,277.74,288.31,10.57,3.81
+AG03,Saint George,sample_0086,164.07,178.23,14.16,8.63
+AG03,Saint George,sample_0087,224.56,226.92,2.36,1.05
+AG03,Saint George,sample_0088,231.6,244.68,13.09,5.65
+AG03,Saint George,sample_0089,244.15,248.35,4.2,1.72
+AG03,Saint George,sample_0090,228.55,231.14,2.59,1.13
+AG03,Saint George,sample_0091,258.87,267.59,8.72,3.37
+AG03,Saint George,sample_0092,287.28,299.59,12.31,4.28
+AG03,Saint George,sample_0093,273.08,278.86,5.77,2.11
+AG03,Saint George,sample_0094,162.21,162.03,-0.18,-0.11
+AG03,Saint George,sample_0095,295.24,300.31,5.08,1.72
+AG03,Saint George,sample_0096,178.51,185.55,7.04,3.94
+AG03,Saint George,sample_0097,342.2,345.26,3.06,0.89
+AG03,Saint George,sample_0098,181.47,185.51,4.04,2.23
+AG03,Saint George,sample_0099,213.76,218.64,4.88,2.28
+AG03,Saint George,sample_0100,193.63,202.14,8.51,4.4
+AG03,Saint George,sample_0101,206.63,212.94,6.31,3.05
+AG03,Saint George,sample_0102,327.45,328.46,1.01,0.31
+AG03,Saint George,sample_0103,252.69,264.88,12.19,4.83
+AG03,Saint George,sample_0104,281.75,283.05,1.29,0.46
+AG03,Saint George,sample_0105,0.0,1.74,1.74,
+AG03,Saint George,sample_0106,170.61,182.08,11.47,6.72
+AG03,Saint George,sample_0107,280.07,287.09,7.02,2.51
+AG03,Saint George,sample_0108,145.09,148.81,3.72,2.56
+AG03,Saint George,sample_0109,225.21,235.69,10.48,4.65
+AG03,Saint George,sample_0110,147.83,148.83,1.0,0.68
+AG03,Saint George,sample_0111,339.28,343.53,4.25,1.25
+AG03,Saint George,sample_0112,267.16,271.91,4.75,1.78
+AG03,Saint George,sample_0113,253.44,264.35,10.91,4.31
+AG03,Saint George,sample_0114,263.81,274.2,10.39,3.94
+AG03,Saint George,sample_0115,300.68,309.13,8.45,2.81
+AG03,Saint George,sample_0116,209.86,214.91,5.05,2.41
+AG03,Saint George,sample_0117,412.98,413.07,0.08,0.02
+AG03,Saint George,sample_0118,246.24,257.6,11.36,4.61
+AG03,Saint George,sample_0119,314.03,329.11,15.07,4.8
+AG03,Saint George,sample_0120,348.41,357.76,9.35,2.68
+AG03,Saint George,sample_0121,280.8,290.02,9.23,3.29
+AG03,Saint George,sample_0122,451.44,451.24,-0.2,-0.04
+AG03,Saint George,sample_0123,407.94,411.88,3.94,0.97
+AG03,Saint George,sample_0124,363.23,367.52,4.29,1.18
+AG03,Saint George,sample_0125,143.44,150.72,7.27,5.07
+AG03,Saint George,sample_0126,301.27,312.12,10.85,3.6
+AG03,Saint George,sample_0127,329.37,335.22,5.84,1.77
+AG03,Saint George,sample_0128,320.15,324.91,4.77,1.49
+AG03,Saint George,sample_0129,261.13,263.78,2.65,1.01
+AG03,Saint George,sample_0130,457.49,459.71,2.22,0.49
+AG03,Saint George,sample_0131,358.15,361.39,3.25,0.91
+AG03,Saint George,sample_0132,411.49,414.61,3.12,0.76
+AG03,Saint George,sample_0133,309.57,317.29,7.73,2.5
+AG03,Saint George,sample_0134,286.07,284.62,-1.45,-0.51
+AG03,Saint George,sample_0135,361.98,371.21,9.24,2.55
+AG03,Saint George,sample_0136,281.73,289.42,7.69,2.73
+AG03,Saint George,sample_0137,338.45,346.9,8.46,2.5
+AG03,Saint George,sample_0138,374.18,381.36,7.18,1.92
+AG03,Saint George,sample_0139,316.2,316.56,0.36,0.11
+AG03,Saint George,sample_0140,349.76,355.78,6.03,1.72
+AG03,Saint George,sample_0141,354.53,365.05,10.52,2.97
+AG03,Saint George,sample_0142,366.42,383.42,17.0,4.64
+AG03,Saint George,sample_0143,309.87,316.29,6.42,2.07
+AG03,Saint George,sample_0144,366.97,372.38,5.41,1.47
+AG03,Saint George,sample_0145,484.14,482.85,-1.29,-0.27
+AG03,Saint George,sample_0146,255.76,260.87,5.11,2.0
+AG03,Saint George,sample_0147,250.14,256.75,6.61,2.64
+AG03,Saint George,sample_0148,332.97,333.51,0.53,0.16
+AG03,Saint George,sample_0149,309.65,315.23,5.58,1.8
+AG03,Saint George,sample_0150,358.17,361.5,3.33,0.93
+AG03,Saint George,sample_0151,370.55,379.6,9.05,2.44
+AG03,Saint George,sample_0152,345.24,352.52,7.28,2.11
+AG03,Saint George,sample_0153,534.1,538.52,4.42,0.83
+AG03,Saint George,sample_0154,435.8,445.04,9.24,2.12
+AG03,Saint George,sample_0155,474.11,476.92,2.81,0.59
+AG03,Saint George,sample_0156,329.38,332.82,3.44,1.04
+AG03,Saint George,sample_0157,410.12,415.5,5.38,1.31
+AG03,Saint George,sample_0158,446.01,449.67,3.66,0.82
+AG03,Saint George,sample_0159,282.55,283.17,0.62,0.22
+AG03,Saint George,sample_0160,543.08,542.18,-0.9,-0.16
+AG03,Saint George,sample_0161,469.2,475.1,5.89,1.26
+AG03,Saint George,sample_0162,446.51,451.45,4.94,1.11
+AG03,Saint George,sample_0163,453.89,452.43,-1.46,-0.32
+AG03,Saint George,sample_0164,480.96,485.36,4.4,0.92
+AG03,Saint George,sample_0165,543.81,543.47,-0.34,-0.06
+AG03,Saint George,sample_0166,533.26,533.27,0.01,0.0
+AG03,Saint George,sample_0167,410.63,410.85,0.22,0.05
+AG03,Saint George,sample_0168,472.01,477.66,5.65,1.2
+AG03,Saint George,sample_0169,408.08,410.71,2.63,0.65
+AG03,Saint George,sample_0170,492.32,499.44,7.13,1.45
+AG03,Saint George,sample_0171,505.97,509.95,3.98,0.79
+AG03,Saint George,sample_0172,616.58,621.31,4.73,0.77
+AG03,Saint George,sample_0173,422.31,427.3,5.0,1.18
+AG03,Saint George,sample_0174,519.56,529.89,10.33,1.99
+AG03,Saint George,sample_0175,549.37,557.73,8.37,1.52
+AG03,Saint George,sample_0176,527.4,532.73,5.33,1.01
+AG03,Saint George,sample_0177,617.64,621.97,4.33,0.7
+AG03,Saint George,sample_0178,688.3,695.59,7.29,1.06
+AG03,Saint George,sample_0179,504.69,506.48,1.79,0.35
+AG03,Saint George,sample_0180,621.88,625.13,3.25,0.52
+AG03,Saint George,sample_0181,438.23,444.02,5.78,1.32
+AG03,Saint George,sample_0182,794.45,796.46,2.01,0.25
+AG03,Saint George,sample_0183,491.9,499.77,7.87,1.6
+AG03,Saint George,sample_0184,614.23,616.06,1.83,0.3
+AG03,Saint George,sample_0185,625.94,633.42,7.48,1.2
+AG03,Saint George,sample_0186,834.75,840.27,5.53,0.66
+AG03,Saint George,sample_0187,465.53,465.57,0.03,0.01
+AG03,Saint George,sample_0188,532.65,537.84,5.19,0.97
+AG03,Saint George,sample_0189,558.73,565.42,6.7,1.2
+AG03,Saint George,sample_0190,491.9,491.73,-0.16,-0.03
+AG03,Saint George,sample_0191,555.94,555.93,-0.01,-0.0
+AG03,Saint George,sample_0192,614.59,617.35,2.76,0.45
+AG03,Saint George,sample_0193,755.49,756.06,0.57,0.07
+AG03,Saint George,sample_0194,606.05,605.29,-0.76,-0.13
+AG03,Saint George,sample_0195,973.41,975.92,2.51,0.26
+AG03,Saint George,sample_0196,1049.63,1056.89,7.26,0.69
+AG03,Saint George,sample_0197,846.37,848.3,1.93,0.23
+AG03,Saint George,sample_0198,909.42,911.64,2.22,0.24
+AG03,Saint George,sample_0199,1117.95,1118.42,0.47,0.04
+AG03,Saint George,sample_0200,1042.25,1044.45,2.21,0.21
+AG04,Saint John's,sample_0001,1071.45,1071.78,0.32,0.03
+AG04,Saint John's,sample_0002,0.0,0.14,0.14,
+AG04,Saint John's,sample_0003,0.0,0.01,0.01,
+AG04,Saint John's,sample_0004,0.0,0.35,0.35,
+AG04,Saint John's,sample_0005,0.0,1.42,1.42,
+AG04,Saint John's,sample_0006,0.03,0.77,0.74,2801.36
+AG04,Saint John's,sample_0007,0.02,1.98,1.97,12243.81
+AG04,Saint John's,sample_0008,2.43,4.23,1.79,73.72
+AG04,Saint John's,sample_0009,5.69,7.81,2.13,37.4
+AG04,Saint John's,sample_0010,0.37,3.38,3.01,811.24
+AG04,Saint John's,sample_0011,0.0,0.41,0.41,
+AG04,Saint John's,sample_0012,2.53,5.54,3.01,119.01
+AG04,Saint John's,sample_0013,1.81,6.53,4.72,261.03
+AG04,Saint John's,sample_0014,22.77,26.39,3.62,15.9
+AG04,Saint John's,sample_0015,20.23,23.69,3.46,17.11
+AG04,Saint John's,sample_0016,4.06,6.2,2.15,52.92
+AG04,Saint John's,sample_0017,7.84,9.97,2.13,27.2
+AG04,Saint John's,sample_0018,23.48,28.08,4.6,19.59
+AG04,Saint John's,sample_0019,16.05,21.07,5.02,31.27
+AG04,Saint John's,sample_0020,18.02,21.78,3.76,20.87
+AG04,Saint John's,sample_0021,0.05,0.56,0.51,1062.92
+AG04,Saint John's,sample_0022,0.0,0.41,0.41,
+AG04,Saint John's,sample_0023,1.13,4.14,3.01,267.41
+AG04,Saint John's,sample_0024,2.01,4.05,2.05,102.08
+AG04,Saint John's,sample_0025,74.69,77.95,3.26,4.36
+AG04,Saint John's,sample_0026,42.92,46.56,3.63,8.47
+AG04,Saint John's,sample_0027,32.78,35.8,3.02,9.22
+AG04,Saint John's,sample_0028,48.76,54.35,5.59,11.47
+AG04,Saint John's,sample_0029,2.69,4.84,2.14,79.5
+AG04,Saint John's,sample_0030,7.8,8.85,1.06,13.57
+AG04,Saint John's,sample_0031,13.94,16.68,2.74,19.66
+AG04,Saint John's,sample_0032,0.0,0.71,0.71,
+AG04,Saint John's,sample_0033,0.32,1.38,1.06,334.13
+AG04,Saint John's,sample_0034,2.96,5.0,2.04,68.83
+AG04,Saint John's,sample_0035,121.22,124.64,3.42,2.82
+AG04,Saint John's,sample_0036,117.37,121.26,3.89,3.32
+AG04,Saint John's,sample_0037,0.0,0.49,0.49,
+AG04,Saint John's,sample_0038,58.83,63.28,4.46,7.58
+AG04,Saint John's,sample_0039,140.45,151.34,10.89,7.75
+AG04,Saint John's,sample_0040,80.21,86.57,6.36,7.93
+AG04,Saint John's,sample_0041,0.08,0.69,0.6,714.41
+AG04,Saint John's,sample_0042,141.85,144.05,2.21,1.56
+AG04,Saint John's,sample_0043,134.83,138.28,3.45,2.56
+AG04,Saint John's,sample_0044,81.32,92.49,11.17,13.73
+AG04,Saint John's,sample_0045,133.85,137.64,3.79,2.83
+AG04,Saint John's,sample_0046,0.0,0.45,0.45,
+AG04,Saint John's,sample_0047,95.1,104.86,9.76,10.26
+AG04,Saint John's,sample_0048,102.7,104.39,1.69,1.65
+AG04,Saint John's,sample_0049,129.86,140.41,10.56,8.13
+AG04,Saint John's,sample_0050,132.02,141.14,9.12,6.91
+AG04,Saint John's,sample_0051,77.01,81.31,4.3,5.58
+AG04,Saint John's,sample_0052,119.97,130.81,10.84,9.04
+AG04,Saint John's,sample_0053,183.35,190.18,6.83,3.72
+AG04,Saint John's,sample_0054,150.05,155.19,5.14,3.42
+AG04,Saint John's,sample_0055,128.31,135.94,7.63,5.94
+AG04,Saint John's,sample_0056,113.75,119.74,5.98,5.26
+AG04,Saint John's,sample_0057,117.85,122.67,4.81,4.08
+AG04,Saint John's,sample_0058,132.79,138.02,5.23,3.94
+AG04,Saint John's,sample_0059,141.84,150.96,9.12,6.43
+AG04,Saint John's,sample_0060,111.6,117.1,5.5,4.93
+AG04,Saint John's,sample_0061,152.67,157.12,4.45,2.91
+AG04,Saint John's,sample_0062,116.24,123.91,7.67,6.6
+AG04,Saint John's,sample_0063,131.79,136.99,5.2,3.95
+AG04,Saint John's,sample_0064,4.61,7.07,2.46,53.26
+AG04,Saint John's,sample_0065,122.26,132.9,10.64,8.71
+AG04,Saint John's,sample_0066,152.86,159.22,6.36,4.16
+AG04,Saint John's,sample_0067,201.63,202.49,0.85,0.42
+AG04,Saint John's,sample_0068,122.91,127.06,4.16,3.38
+AG04,Saint John's,sample_0069,146.42,148.37,1.94,1.33
+AG04,Saint John's,sample_0070,138.74,145.07,6.33,4.56
+AG04,Saint John's,sample_0071,198.17,196.32,-1.85,-0.93
+AG04,Saint John's,sample_0072,1.34,2.29,0.95,71.28
+AG04,Saint John's,sample_0073,207.1,216.39,9.29,4.49
+AG04,Saint John's,sample_0074,172.67,176.76,4.09,2.37
+AG04,Saint John's,sample_0075,223.6,237.04,13.44,6.01
+AG04,Saint John's,sample_0076,262.54,271.89,9.35,3.56
+AG04,Saint John's,sample_0077,248.8,250.38,1.58,0.64
+AG04,Saint John's,sample_0078,288.36,290.13,1.77,0.62
+AG04,Saint John's,sample_0079,212.79,218.36,5.57,2.62
+AG04,Saint John's,sample_0080,224.85,228.68,3.83,1.7
+AG04,Saint John's,sample_0081,150.77,150.64,-0.12,-0.08
+AG04,Saint John's,sample_0082,264.3,267.06,2.76,1.04
+AG04,Saint John's,sample_0083,191.96,197.55,5.59,2.91
+AG04,Saint John's,sample_0084,264.29,265.27,0.99,0.37
+AG04,Saint John's,sample_0085,284.41,293.22,8.82,3.1
+AG04,Saint John's,sample_0086,192.81,203.64,10.83,5.62
+AG04,Saint John's,sample_0087,240.53,244.34,3.81,1.58
+AG04,Saint John's,sample_0088,250.59,261.02,10.43,4.16
+AG04,Saint John's,sample_0089,251.57,256.4,4.84,1.92
+AG04,Saint John's,sample_0090,230.41,232.28,1.87,0.81
+AG04,Saint John's,sample_0091,272.91,279.92,7.01,2.57
+AG04,Saint John's,sample_0092,279.18,286.5,7.32,2.62
+AG04,Saint John's,sample_0093,243.45,247.84,4.39,1.8
+AG04,Saint John's,sample_0094,128.62,130.83,2.21,1.72
+AG04,Saint John's,sample_0095,276.37,281.13,4.76,1.72
+AG04,Saint John's,sample_0096,235.86,239.6,3.74,1.59
+AG04,Saint John's,sample_0097,199.82,205.65,5.83,2.92
+AG04,Saint John's,sample_0098,198.36,202.6,4.24,2.14
+AG04,Saint John's,sample_0099,227.68,232.33,4.65,2.04
+AG04,Saint John's,sample_0100,214.98,220.55,5.57,2.59
+AG04,Saint John's,sample_0101,208.36,216.39,8.03,3.85
+AG04,Saint John's,sample_0102,316.96,320.48,3.52,1.11
+AG04,Saint John's,sample_0103,262.25,270.32,8.07,3.08
+AG04,Saint John's,sample_0104,271.49,274.71,3.23,1.19
+AG04,Saint John's,sample_0105,0.1,1.42,1.33,1386.31
+AG04,Saint John's,sample_0106,210.6,224.63,14.03,6.66
+AG04,Saint John's,sample_0107,294.54,302.89,8.35,2.83
+AG04,Saint John's,sample_0108,196.98,197.91,0.92,0.47
+AG04,Saint John's,sample_0109,216.58,234.81,18.23,8.42
+AG04,Saint John's,sample_0110,222.39,226.1,3.72,1.67
+AG04,Saint John's,sample_0111,321.54,319.91,-1.62,-0.51
+AG04,Saint John's,sample_0112,255.52,261.58,6.06,2.37
+AG04,Saint John's,sample_0113,317.91,326.69,8.78,2.76
+AG04,Saint John's,sample_0114,302.85,310.25,7.4,2.44
+AG04,Saint John's,sample_0115,374.9,379.73,4.83,1.29
+AG04,Saint John's,sample_0116,186.69,191.78,5.09,2.72
+AG04,Saint John's,sample_0117,359.76,363.62,3.85,1.07
+AG04,Saint John's,sample_0118,268.25,276.64,8.39,3.13
+AG04,Saint John's,sample_0119,275.72,286.6,10.88,3.95
+AG04,Saint John's,sample_0120,330.96,343.25,12.29,3.71
+AG04,Saint John's,sample_0121,300.79,306.6,5.8,1.93
+AG04,Saint John's,sample_0122,311.31,314.01,2.71,0.87
+AG04,Saint John's,sample_0123,310.32,315.14,4.82,1.55
+AG04,Saint John's,sample_0124,319.82,321.27,1.46,0.46
+AG04,Saint John's,sample_0125,157.01,161.5,4.49,2.86
+AG04,Saint John's,sample_0126,356.39,365.93,9.54,2.68
+AG04,Saint John's,sample_0127,301.62,311.65,10.04,3.33
+AG04,Saint John's,sample_0128,350.57,356.61,6.03,1.72
+AG04,Saint John's,sample_0129,278.72,286.39,7.66,2.75
+AG04,Saint John's,sample_0130,377.33,381.33,4.0,1.06
+AG04,Saint John's,sample_0131,335.84,341.2,5.36,1.6
+AG04,Saint John's,sample_0132,398.54,400.52,1.99,0.5
+AG04,Saint John's,sample_0133,308.19,315.88,7.69,2.5
+AG04,Saint John's,sample_0134,327.79,332.74,4.95,1.51
+AG04,Saint John's,sample_0135,379.96,391.0,11.04,2.91
+AG04,Saint John's,sample_0136,260.41,268.47,8.07,3.1
+AG04,Saint John's,sample_0137,343.83,353.46,9.64,2.8
+AG04,Saint John's,sample_0138,361.61,368.01,6.4,1.77
+AG04,Saint John's,sample_0139,346.06,351.25,5.18,1.5
+AG04,Saint John's,sample_0140,349.12,354.94,5.82,1.67
+AG04,Saint John's,sample_0141,339.26,347.17,7.91,2.33
+AG04,Saint John's,sample_0142,379.56,385.22,5.66,1.49
+AG04,Saint John's,sample_0143,300.87,307.93,7.06,2.35
+AG04,Saint John's,sample_0144,352.88,358.78,5.9,1.67
+AG04,Saint John's,sample_0145,371.27,374.43,3.16,0.85
+AG04,Saint John's,sample_0146,226.26,226.74,0.48,0.21
+AG04,Saint John's,sample_0147,319.39,321.48,2.09,0.65
+AG04,Saint John's,sample_0148,239.2,246.2,7.0,2.92
+AG04,Saint John's,sample_0149,393.95,393.44,-0.51,-0.13
+AG04,Saint John's,sample_0150,281.8,285.63,3.82,1.36
+AG04,Saint John's,sample_0151,409.61,415.89,6.28,1.53
+AG04,Saint John's,sample_0152,347.46,354.39,6.93,1.99
+AG04,Saint John's,sample_0153,582.0,583.63,1.63,0.28
+AG04,Saint John's,sample_0154,436.5,444.75,8.25,1.89
+AG04,Saint John's,sample_0155,478.34,481.98,3.64,0.76
+AG04,Saint John's,sample_0156,314.14,317.77,3.63,1.15
+AG04,Saint John's,sample_0157,440.52,443.48,2.95,0.67
+AG04,Saint John's,sample_0158,370.05,373.19,3.13,0.85
+AG04,Saint John's,sample_0159,224.98,228.74,3.76,1.67
+AG04,Saint John's,sample_0160,472.78,475.08,2.3,0.49
+AG04,Saint John's,sample_0161,430.6,432.96,2.36,0.55
+AG04,Saint John's,sample_0162,452.47,457.71,5.24,1.16
+AG04,Saint John's,sample_0163,488.77,485.66,-3.11,-0.64
+AG04,Saint John's,sample_0164,380.58,383.64,3.06,0.8
+AG04,Saint John's,sample_0165,570.93,572.62,1.69,0.3
+AG04,Saint John's,sample_0166,513.34,507.0,-6.34,-1.24
+AG04,Saint John's,sample_0167,446.75,448.81,2.07,0.46
+AG04,Saint John's,sample_0168,447.66,451.11,3.45,0.77
+AG04,Saint John's,sample_0169,379.66,385.02,5.36,1.41
+AG04,Saint John's,sample_0170,415.15,419.4,4.25,1.02
+AG04,Saint John's,sample_0171,490.82,492.72,1.9,0.39
+AG04,Saint John's,sample_0172,575.98,580.78,4.8,0.83
+AG04,Saint John's,sample_0173,625.84,633.41,7.57,1.21
+AG04,Saint John's,sample_0174,426.56,429.59,3.02,0.71
+AG04,Saint John's,sample_0175,450.16,454.73,4.57,1.02
+AG04,Saint John's,sample_0176,515.17,517.6,2.43,0.47
+AG04,Saint John's,sample_0177,618.92,620.41,1.49,0.24
+AG04,Saint John's,sample_0178,686.14,689.83,3.69,0.54
+AG04,Saint John's,sample_0179,525.19,529.03,3.84,0.73
+AG04,Saint John's,sample_0180,692.46,693.97,1.5,0.22
+AG04,Saint John's,sample_0181,541.22,545.72,4.5,0.83
+AG04,Saint John's,sample_0182,663.84,667.46,3.62,0.54
+AG04,Saint John's,sample_0183,660.94,669.64,8.69,1.32
+AG04,Saint John's,sample_0184,486.28,488.57,2.29,0.47
+AG04,Saint John's,sample_0185,768.73,778.05,9.33,1.21
+AG04,Saint John's,sample_0186,735.21,737.88,2.67,0.36
+AG04,Saint John's,sample_0187,603.38,604.36,0.98,0.16
+AG04,Saint John's,sample_0188,514.67,521.84,7.17,1.39
+AG04,Saint John's,sample_0189,560.45,568.26,7.82,1.39
+AG04,Saint John's,sample_0190,560.54,561.35,0.81,0.15
+AG04,Saint John's,sample_0191,707.44,710.23,2.79,0.39
+AG04,Saint John's,sample_0192,698.77,701.49,2.72,0.39
+AG04,Saint John's,sample_0193,830.41,833.19,2.78,0.33
+AG04,Saint John's,sample_0194,661.45,663.93,2.48,0.38
+AG04,Saint John's,sample_0195,827.22,827.9,0.68,0.08
+AG04,Saint John's,sample_0196,964.47,964.9,0.44,0.05
+AG04,Saint John's,sample_0197,891.33,891.79,0.46,0.05
+AG04,Saint John's,sample_0198,900.12,901.82,1.7,0.19
+AG04,Saint John's,sample_0199,1120.53,1119.99,-0.54,-0.05
+AG04,Saint John's,sample_0200,1074.55,1072.85,-1.7,-0.16
+AG05,Saint Mary,sample_0001,1111.32,1108.58,-2.73,-0.25
+AG05,Saint Mary,sample_0002,0.0,0.1,0.1,
+AG05,Saint Mary,sample_0003,0.0,0.0,0.0,
+AG05,Saint Mary,sample_0004,0.0,0.53,0.53,
+AG05,Saint Mary,sample_0005,0.0,0.83,0.83,
+AG05,Saint Mary,sample_0006,0.0,0.84,0.84,
+AG05,Saint Mary,sample_0007,0.0,2.2,2.2,
+AG05,Saint Mary,sample_0008,0.79,2.61,1.81,228.12
+AG05,Saint Mary,sample_0009,4.12,7.04,2.92,70.8
+AG05,Saint Mary,sample_0010,1.82,4.42,2.6,143.0
+AG05,Saint Mary,sample_0011,0.0,0.62,0.62,
+AG05,Saint Mary,sample_0012,9.71,14.73,5.02,51.65
+AG05,Saint Mary,sample_0013,0.5,4.28,3.78,759.63
+AG05,Saint Mary,sample_0014,15.6,18.76,3.16,20.24
+AG05,Saint Mary,sample_0015,16.51,18.48,1.96,11.89
+AG05,Saint Mary,sample_0016,3.78,5.94,2.16,57.05
+AG05,Saint Mary,sample_0017,9.79,12.21,2.43,24.81
+AG05,Saint Mary,sample_0018,40.47,44.87,4.4,10.87
+AG05,Saint Mary,sample_0019,19.06,22.24,3.18,16.7
+AG05,Saint Mary,sample_0020,17.08,22.0,4.92,28.78
+AG05,Saint Mary,sample_0021,4.78,5.84,1.06,22.11
+AG05,Saint Mary,sample_0022,0.0,0.4,0.4,
+AG05,Saint Mary,sample_0023,0.79,3.43,2.64,333.14
+AG05,Saint Mary,sample_0024,10.84,12.6,1.76,16.21
+AG05,Saint Mary,sample_0025,50.09,52.86,2.77,5.52
+AG05,Saint Mary,sample_0026,16.55,20.74,4.19,25.29
+AG05,Saint Mary,sample_0027,32.72,35.37,2.65,8.09
+AG05,Saint Mary,sample_0028,47.58,55.78,8.2,17.24
+AG05,Saint Mary,sample_0029,9.87,13.14,3.26,33.04
+AG05,Saint Mary,sample_0030,21.75,23.49,1.74,7.98
+AG05,Saint Mary,sample_0031,6.02,8.37,2.35,38.98
+AG05,Saint Mary,sample_0032,0.0,1.12,1.12,
+AG05,Saint Mary,sample_0033,0.22,1.66,1.45,661.12
+AG05,Saint Mary,sample_0034,5.8,10.08,4.29,73.95
+AG05,Saint Mary,sample_0035,107.09,108.95,1.87,1.74
+AG05,Saint Mary,sample_0036,70.62,72.99,2.37,3.35
+AG05,Saint Mary,sample_0037,0.18,0.9,0.72,401.24
+AG05,Saint Mary,sample_0038,46.17,52.99,6.82,14.77
+AG05,Saint Mary,sample_0039,130.91,139.92,9.01,6.88
+AG05,Saint Mary,sample_0040,145.02,148.5,3.48,2.4
+AG05,Saint Mary,sample_0041,0.0,1.61,1.61,2735941.85
+AG05,Saint Mary,sample_0042,160.19,159.8,-0.39,-0.24
+AG05,Saint Mary,sample_0043,88.67,92.2,3.53,3.98
+AG05,Saint Mary,sample_0044,99.24,109.23,9.99,10.06
+AG05,Saint Mary,sample_0045,101.14,105.06,3.92,3.88
+AG05,Saint Mary,sample_0046,0.0,0.94,0.94,
+AG05,Saint Mary,sample_0047,99.42,106.3,6.89,6.93
+AG05,Saint Mary,sample_0048,176.7,177.86,1.16,0.65
+AG05,Saint Mary,sample_0049,149.3,160.82,11.52,7.72
+AG05,Saint Mary,sample_0050,133.12,140.53,7.41,5.56
+AG05,Saint Mary,sample_0051,96.87,102.55,5.67,5.86
+AG05,Saint Mary,sample_0052,125.23,132.13,6.9,5.51
+AG05,Saint Mary,sample_0053,126.57,135.22,8.65,6.83
+AG05,Saint Mary,sample_0054,152.99,157.49,4.51,2.95
+AG05,Saint Mary,sample_0055,170.47,177.01,6.53,3.83
+AG05,Saint Mary,sample_0056,81.35,90.18,8.83,10.85
+AG05,Saint Mary,sample_0057,108.72,112.94,4.21,3.87
+AG05,Saint Mary,sample_0058,139.73,148.01,8.28,5.92
+AG05,Saint Mary,sample_0059,162.88,166.17,3.29,2.02
+AG05,Saint Mary,sample_0060,137.87,145.1,7.23,5.24
+AG05,Saint Mary,sample_0061,141.61,146.65,5.04,3.56
+AG05,Saint Mary,sample_0062,125.53,134.34,8.81,7.02
+AG05,Saint Mary,sample_0063,179.9,182.56,2.66,1.48
+AG05,Saint Mary,sample_0064,3.34,4.71,1.38,41.28
+AG05,Saint Mary,sample_0065,127.83,135.89,8.05,6.3
+AG05,Saint Mary,sample_0066,125.96,132.85,6.89,5.47
+AG05,Saint Mary,sample_0067,193.16,195.18,2.02,1.05
+AG05,Saint Mary,sample_0068,169.62,175.71,6.09,3.59
+AG05,Saint Mary,sample_0069,133.41,133.23,-0.19,-0.14
+AG05,Saint Mary,sample_0070,144.98,152.16,7.18,4.95
+AG05,Saint Mary,sample_0071,192.16,190.0,-2.16,-1.12
+AG05,Saint Mary,sample_0072,2.09,3.72,1.63,77.94
+AG05,Saint Mary,sample_0073,206.69,217.26,10.58,5.12
+AG05,Saint Mary,sample_0074,222.0,227.7,5.7,2.57
+AG05,Saint Mary,sample_0075,173.42,185.13,11.71,6.75
+AG05,Saint Mary,sample_0076,196.83,203.01,6.18,3.14
+AG05,Saint Mary,sample_0077,189.13,194.23,5.1,2.7
+AG05,Saint Mary,sample_0078,222.96,226.77,3.81,1.71
+AG05,Saint Mary,sample_0079,310.57,314.27,3.69,1.19
+AG05,Saint Mary,sample_0080,286.04,289.13,3.09,1.08
+AG05,Saint Mary,sample_0081,201.64,198.65,-3.0,-1.49
+AG05,Saint Mary,sample_0082,153.64,159.94,6.3,4.1
+AG05,Saint Mary,sample_0083,208.37,216.28,7.91,3.8
+AG05,Saint Mary,sample_0084,169.07,173.43,4.37,2.58
+AG05,Saint Mary,sample_0085,235.08,245.35,10.27,4.37
+AG05,Saint Mary,sample_0086,209.95,221.23,11.28,5.37
+AG05,Saint Mary,sample_0087,238.59,243.79,5.2,2.18
+AG05,Saint Mary,sample_0088,270.34,279.34,9.0,3.33
+AG05,Saint Mary,sample_0089,261.0,262.55,1.56,0.6
+AG05,Saint Mary,sample_0090,233.98,233.89,-0.09,-0.04
+AG05,Saint Mary,sample_0091,211.54,218.03,6.49,3.07
+AG05,Saint Mary,sample_0092,212.27,220.75,8.49,4.0
+AG05,Saint Mary,sample_0093,201.42,206.83,5.41,2.68
+AG05,Saint Mary,sample_0094,116.2,120.25,4.05,3.48
+AG05,Saint Mary,sample_0095,191.3,196.5,5.2,2.72
+AG05,Saint Mary,sample_0096,294.13,299.59,5.46,1.85
+AG05,Saint Mary,sample_0097,107.7,111.29,3.59,3.34
+AG05,Saint Mary,sample_0098,186.37,188.17,1.8,0.97
+AG05,Saint Mary,sample_0099,266.87,269.93,3.06,1.15
+AG05,Saint Mary,sample_0100,241.7,249.53,7.83,3.24
+AG05,Saint Mary,sample_0101,230.7,236.1,5.4,2.34
+AG05,Saint Mary,sample_0102,271.65,274.87,3.22,1.19
+AG05,Saint Mary,sample_0103,252.32,261.67,9.35,3.71
+AG05,Saint Mary,sample_0104,244.47,246.45,1.99,0.81
+AG05,Saint Mary,sample_0105,4.69,6.52,1.83,39.08
+AG05,Saint Mary,sample_0106,278.97,294.21,15.23,5.46
+AG05,Saint Mary,sample_0107,312.5,321.03,8.52,2.73
+AG05,Saint Mary,sample_0108,162.04,169.91,7.87,4.86
+AG05,Saint Mary,sample_0109,199.65,214.75,15.1,7.56
+AG05,Saint Mary,sample_0110,330.83,336.4,5.57,1.68
+AG05,Saint Mary,sample_0111,337.25,337.37,0.11,0.03
+AG05,Saint Mary,sample_0112,265.69,276.65,10.96,4.12
+AG05,Saint Mary,sample_0113,353.78,358.54,4.76,1.35
+AG05,Saint Mary,sample_0114,332.92,337.25,4.32,1.3
+AG05,Saint Mary,sample_0115,475.98,485.68,9.7,2.04
+AG05,Saint Mary,sample_0116,149.87,156.27,6.4,4.27
+AG05,Saint Mary,sample_0117,322.66,330.05,7.39,2.29
+AG05,Saint Mary,sample_0118,307.75,308.42,0.67,0.22
+AG05,Saint Mary,sample_0119,238.65,249.47,10.82,4.54
+AG05,Saint Mary,sample_0120,275.31,286.98,11.67,4.24
+AG05,Saint Mary,sample_0121,267.12,275.33,8.2,3.07
+AG05,Saint Mary,sample_0122,274.01,277.85,3.84,1.4
+AG05,Saint Mary,sample_0123,282.49,290.18,7.68,2.72
+AG05,Saint Mary,sample_0124,232.43,233.35,0.91,0.39
+AG05,Saint Mary,sample_0125,150.78,162.12,11.35,7.52
+AG05,Saint Mary,sample_0126,332.13,345.56,13.43,4.04
+AG05,Saint Mary,sample_0127,351.07,357.16,6.09,1.74
+AG05,Saint Mary,sample_0128,350.81,358.66,7.85,2.24
+AG05,Saint Mary,sample_0129,394.17,399.87,5.7,1.45
+AG05,Saint Mary,sample_0130,313.78,318.17,4.39,1.4
+AG05,Saint Mary,sample_0131,329.56,334.29,4.73,1.43
+AG05,Saint Mary,sample_0132,303.25,304.52,1.28,0.42
+AG05,Saint Mary,sample_0133,358.93,363.97,5.04,1.4
+AG05,Saint Mary,sample_0134,368.32,374.48,6.16,1.67
+AG05,Saint Mary,sample_0135,334.49,344.08,9.6,2.87
+AG05,Saint Mary,sample_0136,262.72,275.78,13.06,4.97
+AG05,Saint Mary,sample_0137,353.28,362.02,8.74,2.47
+AG05,Saint Mary,sample_0138,328.0,335.75,7.75,2.36
+AG05,Saint Mary,sample_0139,435.39,438.6,3.21,0.74
+AG05,Saint Mary,sample_0140,343.92,349.13,5.22,1.52
+AG05,Saint Mary,sample_0141,332.95,345.4,12.45,3.74
+AG05,Saint Mary,sample_0142,342.05,350.2,8.15,2.38
+AG05,Saint Mary,sample_0143,362.39,371.29,8.9,2.45
+AG05,Saint Mary,sample_0144,360.04,361.02,0.98,0.27
+AG05,Saint Mary,sample_0145,233.39,235.9,2.51,1.08
+AG05,Saint Mary,sample_0146,239.48,244.0,4.52,1.89
+AG05,Saint Mary,sample_0147,469.44,471.26,1.82,0.39
+AG05,Saint Mary,sample_0148,243.75,251.13,7.38,3.03
+AG05,Saint Mary,sample_0149,420.82,424.3,3.49,0.83
+AG05,Saint Mary,sample_0150,219.58,225.21,5.63,2.56
+AG05,Saint Mary,sample_0151,395.59,400.31,4.72,1.19
+AG05,Saint Mary,sample_0152,325.42,333.94,8.53,2.62
+AG05,Saint Mary,sample_0153,513.08,517.59,4.51,0.88
+AG05,Saint Mary,sample_0154,375.17,382.33,7.17,1.91
+AG05,Saint Mary,sample_0155,549.68,552.21,2.53,0.46
+AG05,Saint Mary,sample_0156,303.59,308.01,4.42,1.46
+AG05,Saint Mary,sample_0157,438.69,447.32,8.63,1.97
+AG05,Saint Mary,sample_0158,320.91,324.96,4.05,1.26
+AG05,Saint Mary,sample_0159,224.19,229.08,4.89,2.18
+AG05,Saint Mary,sample_0160,348.23,350.91,2.68,0.77
+AG05,Saint Mary,sample_0161,403.72,405.66,1.94,0.48
+AG05,Saint Mary,sample_0162,422.26,425.38,3.12,0.74
+AG05,Saint Mary,sample_0163,460.07,458.84,-1.23,-0.27
+AG05,Saint Mary,sample_0164,303.63,305.68,2.05,0.68
+AG05,Saint Mary,sample_0165,641.87,645.78,3.91,0.61
+AG05,Saint Mary,sample_0166,462.63,464.1,1.47,0.32
+AG05,Saint Mary,sample_0167,450.33,457.39,7.05,1.57
+AG05,Saint Mary,sample_0168,447.99,447.65,-0.34,-0.08
+AG05,Saint Mary,sample_0169,313.46,319.74,6.28,2.0
+AG05,Saint Mary,sample_0170,394.87,399.3,4.43,1.12
+AG05,Saint Mary,sample_0171,343.09,341.91,-1.19,-0.35
+AG05,Saint Mary,sample_0172,456.18,462.6,6.42,1.41
+AG05,Saint Mary,sample_0173,773.04,778.8,5.76,0.74
+AG05,Saint Mary,sample_0174,389.11,394.73,5.62,1.44
+AG05,Saint Mary,sample_0175,386.0,389.34,3.34,0.86
+AG05,Saint Mary,sample_0176,463.47,467.0,3.54,0.76
+AG05,Saint Mary,sample_0177,469.02,470.56,1.55,0.33
+AG05,Saint Mary,sample_0178,563.97,567.14,3.17,0.56
+AG05,Saint Mary,sample_0179,569.22,572.66,3.44,0.6
+AG05,Saint Mary,sample_0180,555.55,558.71,3.16,0.57
+AG05,Saint Mary,sample_0181,789.9,791.96,2.07,0.26
+AG05,Saint Mary,sample_0182,635.27,640.79,5.52,0.87
+AG05,Saint Mary,sample_0183,735.16,740.97,5.81,0.79
+AG05,Saint Mary,sample_0184,368.36,370.65,2.29,0.62
+AG05,Saint Mary,sample_0185,777.39,784.95,7.56,0.97
+AG05,Saint Mary,sample_0186,691.72,696.33,4.61,0.67
+AG05,Saint Mary,sample_0187,798.74,798.45,-0.29,-0.04
+AG05,Saint Mary,sample_0188,567.31,572.04,4.74,0.83
+AG05,Saint Mary,sample_0189,676.23,680.32,4.09,0.6
+AG05,Saint Mary,sample_0190,777.36,781.28,3.91,0.5
+AG05,Saint Mary,sample_0191,898.98,899.61,0.63,0.07
+AG05,Saint Mary,sample_0192,869.87,868.44,-1.42,-0.16
+AG05,Saint Mary,sample_0193,815.27,821.16,5.88,0.72
+AG05,Saint Mary,sample_0194,872.06,872.37,0.32,0.04
+AG05,Saint Mary,sample_0195,666.57,672.0,5.43,0.81
+AG05,Saint Mary,sample_0196,770.58,774.12,3.55,0.46
+AG05,Saint Mary,sample_0197,1000.32,1003.38,3.06,0.31
+AG05,Saint Mary,sample_0198,918.54,922.0,3.47,0.38
+AG05,Saint Mary,sample_0199,963.54,962.77,-0.77,-0.08
+AG05,Saint Mary,sample_0200,1069.25,1069.93,0.69,0.06
+AG06,Saint Paul,sample_0001,1065.02,1070.42,5.4,0.51
+AG06,Saint Paul,sample_0002,0.0,0.03,0.03,
+AG06,Saint Paul,sample_0003,0.0,0.0,0.0,
+AG06,Saint Paul,sample_0004,0.0,0.56,0.56,
+AG06,Saint Paul,sample_0005,0.0,0.76,0.76,
+AG06,Saint Paul,sample_0006,0.0,0.16,0.16,
+AG06,Saint Paul,sample_0007,0.0,1.91,1.91,
+AG06,Saint Paul,sample_0008,0.11,1.71,1.6,1413.19
+AG06,Saint Paul,sample_0009,0.0,0.99,0.99,
+AG06,Saint Paul,sample_0010,0.0,1.5,1.5,
+AG06,Saint Paul,sample_0011,0.0,0.57,0.57,
+AG06,Saint Paul,sample_0012,15.36,18.42,3.06,19.94
+AG06,Saint Paul,sample_0013,1.27,6.02,4.75,374.9
+AG06,Saint Paul,sample_0014,13.01,16.36,3.34,25.66
+AG06,Saint Paul,sample_0015,11.16,17.18,6.02,53.96
+AG06,Saint Paul,sample_0016,5.73,7.7,1.97,34.39
+AG06,Saint Paul,sample_0017,4.66,7.06,2.39,51.36
+AG06,Saint Paul,sample_0018,52.34,58.75,6.41,12.26
+AG06,Saint Paul,sample_0019,15.71,19.61,3.9,24.83
+AG06,Saint Paul,sample_0020,26.25,27.7,1.46,5.56
+AG06,Saint Paul,sample_0021,0.98,2.6,1.61,163.8
+AG06,Saint Paul,sample_0022,0.0,0.71,0.71,
+AG06,Saint Paul,sample_0023,0.0,2.13,2.13,
+AG06,Saint Paul,sample_0024,2.58,5.1,2.52,97.55
+AG06,Saint Paul,sample_0025,20.22,23.5,3.27,16.18
+AG06,Saint Paul,sample_0026,45.89,48.48,2.59,5.65
+AG06,Saint Paul,sample_0027,43.39,48.93,5.54,12.76
+AG06,Saint Paul,sample_0028,35.04,44.34,9.3,26.56
+AG06,Saint Paul,sample_0029,24.63,28.08,3.45,14.0
+AG06,Saint Paul,sample_0030,19.2,21.28,2.08,10.82
+AG06,Saint Paul,sample_0031,12.93,15.71,2.79,21.55
+AG06,Saint Paul,sample_0032,0.0,1.15,1.15,
+AG06,Saint Paul,sample_0033,0.0,1.5,1.5,
+AG06,Saint Paul,sample_0034,3.59,6.86,3.27,91.08
+AG06,Saint Paul,sample_0035,120.77,124.3,3.53,2.92
+AG06,Saint Paul,sample_0036,110.37,115.02,4.65,4.21
+AG06,Saint Paul,sample_0037,1.13,1.72,0.59,52.71
+AG06,Saint Paul,sample_0038,82.93,86.36,3.43,4.14
+AG06,Saint Paul,sample_0039,95.64,104.86,9.22,9.64
+AG06,Saint Paul,sample_0040,154.38,156.59,2.21,1.43
+AG06,Saint Paul,sample_0041,0.0,0.9,0.9,
+AG06,Saint Paul,sample_0042,114.45,114.31,-0.14,-0.12
+AG06,Saint Paul,sample_0043,56.05,59.56,3.51,6.27
+AG06,Saint Paul,sample_0044,123.92,127.9,3.98,3.21
+AG06,Saint Paul,sample_0045,60.72,64.62,3.9,6.42
+AG06,Saint Paul,sample_0046,0.0,0.31,0.31,
+AG06,Saint Paul,sample_0047,115.54,120.85,5.31,4.59
+AG06,Saint Paul,sample_0048,140.51,143.25,2.75,1.95
+AG06,Saint Paul,sample_0049,108.59,114.59,6.0,5.53
+AG06,Saint Paul,sample_0050,82.42,89.33,6.91,8.39
+AG06,Saint Paul,sample_0051,114.16,118.4,4.24,3.71
+AG06,Saint Paul,sample_0052,112.62,127.26,14.64,13.0
+AG06,Saint Paul,sample_0053,120.54,129.05,8.51,7.06
+AG06,Saint Paul,sample_0054,115.4,119.69,4.28,3.71
+AG06,Saint Paul,sample_0055,148.83,151.0,2.17,1.46
+AG06,Saint Paul,sample_0056,120.49,126.57,6.08,5.04
+AG06,Saint Paul,sample_0057,160.17,166.46,6.28,3.92
+AG06,Saint Paul,sample_0058,54.62,58.85,4.23,7.74
+AG06,Saint Paul,sample_0059,102.06,111.31,9.24,9.06
+AG06,Saint Paul,sample_0060,121.11,132.6,11.49,9.49
+AG06,Saint Paul,sample_0061,74.47,76.28,1.81,2.43
+AG06,Saint Paul,sample_0062,95.96,104.28,8.32,8.67
+AG06,Saint Paul,sample_0063,123.12,126.89,3.77,3.06
+AG06,Saint Paul,sample_0064,4.18,5.63,1.45,34.62
+AG06,Saint Paul,sample_0065,209.43,214.06,4.63,2.21
+AG06,Saint Paul,sample_0066,139.53,144.9,5.37,3.85
+AG06,Saint Paul,sample_0067,138.44,140.07,1.63,1.18
+AG06,Saint Paul,sample_0068,137.24,143.89,6.65,4.85
+AG06,Saint Paul,sample_0069,205.46,209.17,3.71,1.81
+AG06,Saint Paul,sample_0070,210.26,214.59,4.33,2.06
+AG06,Saint Paul,sample_0071,134.16,138.07,3.91,2.92
+AG06,Saint Paul,sample_0072,0.21,1.75,1.54,736.22
+AG06,Saint Paul,sample_0073,157.29,170.11,12.82,8.15
+AG06,Saint Paul,sample_0074,242.81,249.0,6.19,2.55
+AG06,Saint Paul,sample_0075,210.76,217.88,7.12,3.38
+AG06,Saint Paul,sample_0076,225.15,235.16,10.01,4.45
+AG06,Saint Paul,sample_0077,203.72,207.12,3.4,1.67
+AG06,Saint Paul,sample_0078,178.33,179.75,1.42,0.8
+AG06,Saint Paul,sample_0079,241.79,243.07,1.28,0.53
+AG06,Saint Paul,sample_0080,252.55,253.18,0.63,0.25
+AG06,Saint Paul,sample_0081,210.36,211.62,1.26,0.6
+AG06,Saint Paul,sample_0082,112.05,120.18,8.13,7.26
+AG06,Saint Paul,sample_0083,179.4,187.13,7.73,4.31
+AG06,Saint Paul,sample_0084,218.77,220.62,1.85,0.84
+AG06,Saint Paul,sample_0085,246.09,254.03,7.95,3.23
+AG06,Saint Paul,sample_0086,157.95,171.37,13.41,8.49
+AG06,Saint Paul,sample_0087,233.29,235.64,2.35,1.01
+AG06,Saint Paul,sample_0088,187.04,197.82,10.78,5.77
+AG06,Saint Paul,sample_0089,205.02,215.25,10.23,4.99
+AG06,Saint Paul,sample_0090,268.45,271.27,2.82,1.05
+AG06,Saint Paul,sample_0091,196.57,203.61,7.03,3.58
+AG06,Saint Paul,sample_0092,229.77,239.66,9.89,4.31
+AG06,Saint Paul,sample_0093,275.37,280.22,4.86,1.76
+AG06,Saint Paul,sample_0094,140.72,143.43,2.71,1.93
+AG06,Saint Paul,sample_0095,203.48,209.26,5.79,2.84
+AG06,Saint Paul,sample_0096,180.48,183.71,3.24,1.79
+AG06,Saint Paul,sample_0097,238.77,242.17,3.4,1.42
+AG06,Saint Paul,sample_0098,239.1,240.44,1.34,0.56
+AG06,Saint Paul,sample_0099,234.84,239.96,5.12,2.18
+AG06,Saint Paul,sample_0100,240.74,245.27,4.52,1.88
+AG06,Saint Paul,sample_0101,201.6,212.14,10.54,5.23
+AG06,Saint Paul,sample_0102,267.52,272.67,5.15,1.93
+AG06,Saint Paul,sample_0103,259.43,276.62,17.19,6.63
+AG06,Saint Paul,sample_0104,268.15,269.82,1.67,0.62
+AG06,Saint Paul,sample_0105,1.39,2.94,1.55,111.57
+AG06,Saint Paul,sample_0106,207.37,211.76,4.39,2.12
+AG06,Saint Paul,sample_0107,281.18,286.71,5.54,1.97
+AG06,Saint Paul,sample_0108,102.4,109.26,6.86,6.7
+AG06,Saint Paul,sample_0109,195.12,211.03,15.91,8.15
+AG06,Saint Paul,sample_0110,192.23,201.09,8.86,4.61
+AG06,Saint Paul,sample_0111,259.12,263.71,4.59,1.77
+AG06,Saint Paul,sample_0112,295.91,304.71,8.8,2.97
+AG06,Saint Paul,sample_0113,261.08,263.24,2.16,0.83
+AG06,Saint Paul,sample_0114,279.93,285.88,5.94,2.12
+AG06,Saint Paul,sample_0115,298.2,306.0,7.8,2.61
+AG06,Saint Paul,sample_0116,230.54,235.8,5.27,2.28
+AG06,Saint Paul,sample_0117,322.06,328.71,6.65,2.07
+AG06,Saint Paul,sample_0118,285.04,290.76,5.71,2.0
+AG06,Saint Paul,sample_0119,305.18,311.4,6.22,2.04
+AG06,Saint Paul,sample_0120,340.95,352.46,11.51,3.38
+AG06,Saint Paul,sample_0121,291.04,295.9,4.86,1.67
+AG06,Saint Paul,sample_0122,435.81,443.81,8.0,1.84
+AG06,Saint Paul,sample_0123,359.64,363.49,3.84,1.07
+AG06,Saint Paul,sample_0124,418.76,421.95,3.2,0.76
+AG06,Saint Paul,sample_0125,159.5,170.95,11.45,7.18
+AG06,Saint Paul,sample_0126,325.5,338.34,12.84,3.95
+AG06,Saint Paul,sample_0127,293.72,299.93,6.21,2.11
+AG06,Saint Paul,sample_0128,317.98,325.74,7.75,2.44
+AG06,Saint Paul,sample_0129,421.8,428.52,6.72,1.59
+AG06,Saint Paul,sample_0130,303.07,309.86,6.79,2.24
+AG06,Saint Paul,sample_0131,361.35,364.08,2.73,0.76
+AG06,Saint Paul,sample_0132,330.47,332.33,1.87,0.56
+AG06,Saint Paul,sample_0133,415.48,419.32,3.83,0.92
+AG06,Saint Paul,sample_0134,349.5,351.84,2.33,0.67
+AG06,Saint Paul,sample_0135,300.93,309.59,8.66,2.88
+AG06,Saint Paul,sample_0136,248.15,257.8,9.64,3.89
+AG06,Saint Paul,sample_0137,295.64,299.49,3.85,1.3
+AG06,Saint Paul,sample_0138,340.32,347.5,7.18,2.11
+AG06,Saint Paul,sample_0139,353.79,357.29,3.5,0.99
+AG06,Saint Paul,sample_0140,373.97,377.42,3.45,0.92
+AG06,Saint Paul,sample_0141,351.11,356.79,5.68,1.62
+AG06,Saint Paul,sample_0142,356.63,363.87,7.24,2.03
+AG06,Saint Paul,sample_0143,345.61,349.61,4.0,1.16
+AG06,Saint Paul,sample_0144,369.23,375.07,5.84,1.58
+AG06,Saint Paul,sample_0145,288.58,292.64,4.06,1.41
+AG06,Saint Paul,sample_0146,449.31,454.11,4.8,1.07
+AG06,Saint Paul,sample_0147,404.17,406.17,2.0,0.49
+AG06,Saint Paul,sample_0148,430.09,431.84,1.74,0.41
+AG06,Saint Paul,sample_0149,283.5,287.39,3.89,1.37
+AG06,Saint Paul,sample_0150,369.38,373.54,4.15,1.12
+AG06,Saint Paul,sample_0151,316.38,322.68,6.3,1.99
+AG06,Saint Paul,sample_0152,310.85,318.4,7.55,2.43
+AG06,Saint Paul,sample_0153,366.66,368.42,1.76,0.48
+AG06,Saint Paul,sample_0154,354.26,360.42,6.16,1.74
+AG06,Saint Paul,sample_0155,580.99,582.54,1.55,0.27
+AG06,Saint Paul,sample_0156,386.91,391.55,4.63,1.2
+AG06,Saint Paul,sample_0157,336.4,342.55,6.15,1.83
+AG06,Saint Paul,sample_0158,491.73,493.65,1.93,0.39
+AG06,Saint Paul,sample_0159,413.77,417.01,3.25,0.78
+AG06,Saint Paul,sample_0160,580.43,586.17,5.74,0.99
+AG06,Saint Paul,sample_0161,415.97,421.38,5.41,1.3
+AG06,Saint Paul,sample_0162,429.34,435.7,6.36,1.48
+AG06,Saint Paul,sample_0163,400.04,405.04,5.0,1.25
+AG06,Saint Paul,sample_0164,542.12,546.05,3.93,0.72
+AG06,Saint Paul,sample_0165,552.14,550.32,-1.82,-0.33
+AG06,Saint Paul,sample_0166,504.48,508.35,3.87,0.77
+AG06,Saint Paul,sample_0167,465.09,465.6,0.52,0.11
+AG06,Saint Paul,sample_0168,600.78,603.01,2.23,0.37
+AG06,Saint Paul,sample_0169,360.85,368.8,7.95,2.2
+AG06,Saint Paul,sample_0170,556.07,551.5,-4.57,-0.82
+AG06,Saint Paul,sample_0171,333.33,338.11,4.78,1.43
+AG06,Saint Paul,sample_0172,374.98,381.58,6.6,1.76
+AG06,Saint Paul,sample_0173,531.25,534.51,3.26,0.61
+AG06,Saint Paul,sample_0174,478.55,479.39,0.84,0.18
+AG06,Saint Paul,sample_0175,493.01,494.52,1.51,0.31
+AG06,Saint Paul,sample_0176,630.93,634.13,3.2,0.51
+AG06,Saint Paul,sample_0177,398.4,402.44,4.04,1.01
+AG06,Saint Paul,sample_0178,536.2,537.46,1.26,0.23
+AG06,Saint Paul,sample_0179,575.34,578.07,2.72,0.47
+AG06,Saint Paul,sample_0180,458.94,463.93,4.99,1.09
+AG06,Saint Paul,sample_0181,567.43,568.4,0.97,0.17
+AG06,Saint Paul,sample_0182,622.73,626.02,3.29,0.53
+AG06,Saint Paul,sample_0183,521.6,527.37,5.77,1.11
+AG06,Saint Paul,sample_0184,550.21,553.65,3.44,0.63
+AG06,Saint Paul,sample_0185,650.14,657.18,7.04,1.08
+AG06,Saint Paul,sample_0186,659.67,663.16,3.49,0.53
+AG06,Saint Paul,sample_0187,761.53,758.67,-2.86,-0.38
+AG06,Saint Paul,sample_0188,597.47,604.48,7.01,1.17
+AG06,Saint Paul,sample_0189,642.15,643.04,0.9,0.14
+AG06,Saint Paul,sample_0190,738.06,736.9,-1.16,-0.16
+AG06,Saint Paul,sample_0191,733.96,737.46,3.5,0.48
+AG06,Saint Paul,sample_0192,881.96,881.29,-0.67,-0.08
+AG06,Saint Paul,sample_0193,607.72,612.15,4.43,0.73
+AG06,Saint Paul,sample_0194,890.89,891.89,1.0,0.11
+AG06,Saint Paul,sample_0195,830.44,832.11,1.67,0.2
+AG06,Saint Paul,sample_0196,1006.65,1007.51,0.86,0.09
+AG06,Saint Paul,sample_0197,879.19,879.5,0.31,0.04
+AG06,Saint Paul,sample_0198,838.23,838.22,-0.01,-0.0
+AG06,Saint Paul,sample_0199,1034.19,1039.16,4.97,0.48
+AG06,Saint Paul,sample_0200,1104.61,1108.13,3.52,0.32
+AG07,Saint Peter,sample_0001,1006.68,1004.23,-2.45,-0.24
+AG07,Saint Peter,sample_0002,0.0,0.03,0.03,
+AG07,Saint Peter,sample_0003,0.0,0.0,0.0,
+AG07,Saint Peter,sample_0004,0.0,0.27,0.27,
+AG07,Saint Peter,sample_0005,0.0,1.46,1.46,
+AG07,Saint Peter,sample_0006,0.0,0.12,0.12,
+AG07,Saint Peter,sample_0007,0.0,2.49,2.49,
+AG07,Saint Peter,sample_0008,1.22,4.59,3.37,275.63
+AG07,Saint Peter,sample_0009,0.0,0.81,0.81,
+AG07,Saint Peter,sample_0010,1.31,4.49,3.17,241.54
+AG07,Saint Peter,sample_0011,0.0,0.38,0.38,
+AG07,Saint Peter,sample_0012,10.73,10.55,-0.17,-1.62
+AG07,Saint Peter,sample_0013,2.38,6.31,3.93,165.41
+AG07,Saint Peter,sample_0014,7.2,11.38,4.18,58.04
+AG07,Saint Peter,sample_0015,19.79,27.26,7.46,37.71
+AG07,Saint Peter,sample_0016,7.6,9.65,2.05,26.97
+AG07,Saint Peter,sample_0017,4.72,8.73,4.01,84.95
+AG07,Saint Peter,sample_0018,26.84,31.66,4.82,17.96
+AG07,Saint Peter,sample_0019,14.84,18.62,3.78,25.45
+AG07,Saint Peter,sample_0020,6.85,12.94,6.09,88.87
+AG07,Saint Peter,sample_0021,0.0,0.64,0.64,
+AG07,Saint Peter,sample_0022,0.0,0.38,0.38,
+AG07,Saint Peter,sample_0023,0.0,1.9,1.9,
+AG07,Saint Peter,sample_0024,0.89,2.38,1.49,167.48
+AG07,Saint Peter,sample_0025,32.44,33.93,1.49,4.6
+AG07,Saint Peter,sample_0026,39.36,42.32,2.96,7.53
+AG07,Saint Peter,sample_0027,22.86,27.36,4.5,19.66
+AG07,Saint Peter,sample_0028,30.11,36.4,6.28,20.87
+AG07,Saint Peter,sample_0029,14.26,15.58,1.32,9.23
+AG07,Saint Peter,sample_0030,5.82,8.27,2.45,42.17
+AG07,Saint Peter,sample_0031,19.41,23.38,3.98,20.5
+AG07,Saint Peter,sample_0032,0.0,0.69,0.69,
+AG07,Saint Peter,sample_0033,0.0,0.62,0.62,
+AG07,Saint Peter,sample_0034,1.22,3.16,1.94,158.65
+AG07,Saint Peter,sample_0035,92.28,96.28,4.01,4.34
+AG07,Saint Peter,sample_0036,122.1,125.33,3.23,2.64
+AG07,Saint Peter,sample_0037,0.0,0.23,0.23,
+AG07,Saint Peter,sample_0038,97.13,98.31,1.19,1.22
+AG07,Saint Peter,sample_0039,128.03,134.16,6.13,4.79
+AG07,Saint Peter,sample_0040,73.93,80.02,6.08,8.23
+AG07,Saint Peter,sample_0041,0.0,0.41,0.41,
+AG07,Saint Peter,sample_0042,127.35,127.42,0.07,0.05
+AG07,Saint Peter,sample_0043,119.55,123.87,4.32,3.61
+AG07,Saint Peter,sample_0044,103.31,104.1,0.79,0.76
+AG07,Saint Peter,sample_0045,120.52,124.97,4.45,3.69
+AG07,Saint Peter,sample_0046,0.0,0.29,0.29,
+AG07,Saint Peter,sample_0047,126.45,132.32,5.87,4.64
+AG07,Saint Peter,sample_0048,70.04,71.44,1.4,2.0
+AG07,Saint Peter,sample_0049,99.77,112.35,12.58,12.61
+AG07,Saint Peter,sample_0050,98.1,107.19,9.1,9.27
+AG07,Saint Peter,sample_0051,196.63,199.29,2.66,1.35
+AG07,Saint Peter,sample_0052,102.23,112.97,10.74,10.51
+AG07,Saint Peter,sample_0053,128.19,134.91,6.72,5.24
+AG07,Saint Peter,sample_0054,114.84,118.56,3.72,3.24
+AG07,Saint Peter,sample_0055,162.55,165.46,2.91,1.79
+AG07,Saint Peter,sample_0056,105.95,113.25,7.3,6.89
+AG07,Saint Peter,sample_0057,180.95,183.93,2.98,1.65
+AG07,Saint Peter,sample_0058,52.09,61.09,9.0,17.28
+AG07,Saint Peter,sample_0059,98.76,104.78,6.01,6.09
+AG07,Saint Peter,sample_0060,115.24,118.55,3.31,2.87
+AG07,Saint Peter,sample_0061,82.13,84.26,2.13,2.59
+AG07,Saint Peter,sample_0062,110.46,119.14,8.68,7.85
+AG07,Saint Peter,sample_0063,110.89,117.67,6.78,6.11
+AG07,Saint Peter,sample_0064,3.77,4.91,1.15,30.44
+AG07,Saint Peter,sample_0065,220.77,225.59,4.83,2.19
+AG07,Saint Peter,sample_0066,144.31,148.94,4.64,3.21
+AG07,Saint Peter,sample_0067,197.58,199.12,1.54,0.78
+AG07,Saint Peter,sample_0068,102.89,105.77,2.88,2.8
+AG07,Saint Peter,sample_0069,201.94,206.1,4.15,2.06
+AG07,Saint Peter,sample_0070,173.47,177.05,3.59,2.07
+AG07,Saint Peter,sample_0071,164.34,163.03,-1.31,-0.8
+AG07,Saint Peter,sample_0072,1.61,2.86,1.25,77.91
+AG07,Saint Peter,sample_0073,146.3,161.7,15.4,10.52
+AG07,Saint Peter,sample_0074,226.82,230.93,4.11,1.81
+AG07,Saint Peter,sample_0075,200.19,209.32,9.13,4.56
+AG07,Saint Peter,sample_0076,217.05,227.51,10.46,4.82
+AG07,Saint Peter,sample_0077,234.68,238.24,3.56,1.52
+AG07,Saint Peter,sample_0078,238.93,241.43,2.49,1.04
+AG07,Saint Peter,sample_0079,148.88,152.58,3.7,2.48
+AG07,Saint Peter,sample_0080,256.19,257.67,1.48,0.58
+AG07,Saint Peter,sample_0081,187.29,190.01,2.72,1.45
+AG07,Saint Peter,sample_0082,263.04,268.77,5.74,2.18
+AG07,Saint Peter,sample_0083,187.66,192.84,5.18,2.76
+AG07,Saint Peter,sample_0084,296.61,301.69,5.09,1.72
+AG07,Saint Peter,sample_0085,212.68,217.26,4.58,2.15
+AG07,Saint Peter,sample_0086,166.72,174.9,8.18,4.9
+AG07,Saint Peter,sample_0087,226.56,230.56,4.0,1.76
+AG07,Saint Peter,sample_0088,242.84,253.76,10.92,4.5
+AG07,Saint Peter,sample_0089,224.94,230.59,5.64,2.51
+AG07,Saint Peter,sample_0090,252.62,257.12,4.5,1.78
+AG07,Saint Peter,sample_0091,228.2,234.49,6.29,2.76
+AG07,Saint Peter,sample_0092,272.43,281.87,9.44,3.46
+AG07,Saint Peter,sample_0093,269.7,271.37,1.67,0.62
+AG07,Saint Peter,sample_0094,161.74,164.27,2.53,1.57
+AG07,Saint Peter,sample_0095,249.75,255.81,6.06,2.43
+AG07,Saint Peter,sample_0096,160.18,166.6,6.43,4.01
+AG07,Saint Peter,sample_0097,352.77,358.05,5.27,1.5
+AG07,Saint Peter,sample_0098,223.03,224.57,1.54,0.69
+AG07,Saint Peter,sample_0099,220.33,224.47,4.15,1.88
+AG07,Saint Peter,sample_0100,211.11,220.38,9.27,4.39
+AG07,Saint Peter,sample_0101,192.43,200.52,8.09,4.21
+AG07,Saint Peter,sample_0102,281.54,283.95,2.4,0.85
+AG07,Saint Peter,sample_0103,271.31,282.41,11.1,4.09
+AG07,Saint Peter,sample_0104,252.74,253.82,1.09,0.43
+AG07,Saint Peter,sample_0105,0.0,1.31,1.31,
+AG07,Saint Peter,sample_0106,161.88,170.35,8.48,5.24
+AG07,Saint Peter,sample_0107,251.49,254.01,2.52,1.0
+AG07,Saint Peter,sample_0108,114.45,120.27,5.82,5.09
+AG07,Saint Peter,sample_0109,229.36,239.65,10.29,4.49
+AG07,Saint Peter,sample_0110,136.07,140.76,4.68,3.44
+AG07,Saint Peter,sample_0111,304.37,310.92,6.54,2.15
+AG07,Saint Peter,sample_0112,302.07,304.26,2.19,0.73
+AG07,Saint Peter,sample_0113,212.83,219.48,6.65,3.12
+AG07,Saint Peter,sample_0114,268.6,276.08,7.49,2.79
+AG07,Saint Peter,sample_0115,267.87,281.01,13.14,4.9
+AG07,Saint Peter,sample_0116,227.54,237.18,9.64,4.24
+AG07,Saint Peter,sample_0117,348.74,352.83,4.09,1.17
+AG07,Saint Peter,sample_0118,287.28,295.08,7.8,2.72
+AG07,Saint Peter,sample_0119,338.39,343.59,5.2,1.54
+AG07,Saint Peter,sample_0120,331.4,341.21,9.8,2.96
+AG07,Saint Peter,sample_0121,269.57,278.45,8.89,3.3
+AG07,Saint Peter,sample_0122,491.84,496.02,4.19,0.85
+AG07,Saint Peter,sample_0123,402.71,405.91,3.2,0.8
+AG07,Saint Peter,sample_0124,458.4,459.32,0.92,0.2
+AG07,Saint Peter,sample_0125,142.48,146.4,3.92,2.75
+AG07,Saint Peter,sample_0126,319.64,325.05,5.4,1.69
+AG07,Saint Peter,sample_0127,328.61,331.41,2.8,0.85
+AG07,Saint Peter,sample_0128,307.06,310.24,3.19,1.04
+AG07,Saint Peter,sample_0129,289.27,294.59,5.32,1.84
+AG07,Saint Peter,sample_0130,464.49,465.94,1.45,0.31
+AG07,Saint Peter,sample_0131,337.85,345.12,7.28,2.15
+AG07,Saint Peter,sample_0132,478.1,479.35,1.25,0.26
+AG07,Saint Peter,sample_0133,336.81,339.82,3.01,0.89
+AG07,Saint Peter,sample_0134,303.3,299.97,-3.33,-1.1
+AG07,Saint Peter,sample_0135,305.93,309.62,3.69,1.21
+AG07,Saint Peter,sample_0136,279.98,292.03,12.05,4.3
+AG07,Saint Peter,sample_0137,294.92,299.69,4.77,1.62
+AG07,Saint Peter,sample_0138,361.25,368.33,7.08,1.96
+AG07,Saint Peter,sample_0139,302.31,306.52,4.21,1.39
+AG07,Saint Peter,sample_0140,374.25,376.92,2.67,0.71
+AG07,Saint Peter,sample_0141,351.95,365.96,14.02,3.98
+AG07,Saint Peter,sample_0142,372.3,375.7,3.4,0.91
+AG07,Saint Peter,sample_0143,332.75,337.86,5.11,1.54
+AG07,Saint Peter,sample_0144,379.88,381.69,1.81,0.48
+AG07,Saint Peter,sample_0145,436.54,438.66,2.12,0.49
+AG07,Saint Peter,sample_0146,383.26,386.56,3.3,0.86
+AG07,Saint Peter,sample_0147,295.93,297.35,1.42,0.48
+AG07,Saint Peter,sample_0148,433.49,439.69,6.2,1.43
+AG07,Saint Peter,sample_0149,267.47,275.63,8.17,3.05
+AG07,Saint Peter,sample_0150,386.21,384.39,-1.81,-0.47
+AG07,Saint Peter,sample_0151,342.88,352.02,9.14,2.67
+AG07,Saint Peter,sample_0152,330.47,340.17,9.7,2.94
+AG07,Saint Peter,sample_0153,486.27,488.1,1.83,0.38
+AG07,Saint Peter,sample_0154,398.39,405.91,7.51,1.89
+AG07,Saint Peter,sample_0155,537.77,538.27,0.5,0.09
+AG07,Saint Peter,sample_0156,371.47,376.92,5.45,1.47
+AG07,Saint Peter,sample_0157,351.66,361.9,10.24,2.91
+AG07,Saint Peter,sample_0158,500.73,503.96,3.23,0.64
+AG07,Saint Peter,sample_0159,393.77,398.43,4.66,1.18
+AG07,Saint Peter,sample_0160,549.0,553.07,4.07,0.74
+AG07,Saint Peter,sample_0161,441.22,447.04,5.82,1.32
+AG07,Saint Peter,sample_0162,432.87,438.81,5.93,1.37
+AG07,Saint Peter,sample_0163,386.62,385.87,-0.75,-0.19
+AG07,Saint Peter,sample_0164,636.24,642.38,6.15,0.97
+AG07,Saint Peter,sample_0165,463.98,467.37,3.39,0.73
+AG07,Saint Peter,sample_0166,513.24,512.11,-1.13,-0.22
+AG07,Saint Peter,sample_0167,416.22,417.73,1.5,0.36
+AG07,Saint Peter,sample_0168,529.6,529.29,-0.31,-0.06
+AG07,Saint Peter,sample_0169,422.83,426.93,4.09,0.97
+AG07,Saint Peter,sample_0170,573.76,577.01,3.26,0.57
+AG07,Saint Peter,sample_0171,430.09,433.49,3.4,0.79
+AG07,Saint Peter,sample_0172,498.5,498.75,0.26,0.05
+AG07,Saint Peter,sample_0173,371.28,378.55,7.27,1.96
+AG07,Saint Peter,sample_0174,558.81,560.41,1.6,0.29
+AG07,Saint Peter,sample_0175,583.83,586.05,2.22,0.38
+AG07,Saint Peter,sample_0176,624.77,635.32,10.55,1.69
+AG07,Saint Peter,sample_0177,574.08,579.96,5.88,1.02
+AG07,Saint Peter,sample_0178,630.02,630.94,0.91,0.15
+AG07,Saint Peter,sample_0179,522.61,525.76,3.16,0.6
+AG07,Saint Peter,sample_0180,626.51,629.98,3.47,0.55
+AG07,Saint Peter,sample_0181,452.08,461.86,9.78,2.16
+AG07,Saint Peter,sample_0182,725.73,733.05,7.33,1.01
+AG07,Saint Peter,sample_0183,492.23,490.01,-2.22,-0.45
+AG07,Saint Peter,sample_0184,590.02,596.3,6.28,1.06
+AG07,Saint Peter,sample_0185,553.02,559.68,6.66,1.2
+AG07,Saint Peter,sample_0186,725.92,729.81,3.89,0.54
+AG07,Saint Peter,sample_0187,482.72,483.48,0.76,0.16
+AG07,Saint Peter,sample_0188,646.69,651.6,4.91,0.76
+AG07,Saint Peter,sample_0189,591.07,597.61,6.53,1.11
+AG07,Saint Peter,sample_0190,542.06,547.57,5.51,1.02
+AG07,Saint Peter,sample_0191,523.93,527.37,3.44,0.66
+AG07,Saint Peter,sample_0192,661.75,664.31,2.56,0.39
+AG07,Saint Peter,sample_0193,691.77,692.9,1.12,0.16
+AG07,Saint Peter,sample_0194,692.28,692.48,0.2,0.03
+AG07,Saint Peter,sample_0195,1013.21,1016.8,3.58,0.35
+AG07,Saint Peter,sample_0196,1026.97,1030.76,3.78,0.37
+AG07,Saint Peter,sample_0197,913.58,914.55,0.98,0.11
+AG07,Saint Peter,sample_0198,915.99,916.23,0.24,0.03
+AG07,Saint Peter,sample_0199,1032.39,1038.67,6.29,0.61
+AG07,Saint Peter,sample_0200,1081.29,1080.48,-0.81,-0.08
+AG08,Saint Philip,sample_0001,911.48,913.09,1.61,0.18
+AG08,Saint Philip,sample_0002,0.0,0.03,0.03,
+AG08,Saint Philip,sample_0003,0.0,0.0,0.0,
+AG08,Saint Philip,sample_0004,0.0,0.4,0.4,
+AG08,Saint Philip,sample_0005,0.0,1.19,1.19,
+AG08,Saint Philip,sample_0006,0.0,0.18,0.18,
+AG08,Saint Philip,sample_0007,0.0,2.29,2.29,
+AG08,Saint Philip,sample_0008,0.0,2.24,2.24,
+AG08,Saint Philip,sample_0009,0.0,1.39,1.39,
+AG08,Saint Philip,sample_0010,2.83,5.31,2.48,87.68
+AG08,Saint Philip,sample_0011,0.0,0.4,0.4,
+AG08,Saint Philip,sample_0012,14.48,15.24,0.76,5.24
+AG08,Saint Philip,sample_0013,1.4,5.57,4.17,297.98
+AG08,Saint Philip,sample_0014,2.26,7.08,4.81,212.52
+AG08,Saint Philip,sample_0015,17.19,23.86,6.67,38.79
+AG08,Saint Philip,sample_0016,12.58,15.16,2.58,20.53
+AG08,Saint Philip,sample_0017,2.62,5.88,3.27,124.87
+AG08,Saint Philip,sample_0018,29.09,33.28,4.19,14.41
+AG08,Saint Philip,sample_0019,9.87,12.89,3.03,30.67
+AG08,Saint Philip,sample_0020,17.59,21.07,3.48,19.77
+AG08,Saint Philip,sample_0021,0.0,0.5,0.5,
+AG08,Saint Philip,sample_0022,0.0,0.57,0.57,
+AG08,Saint Philip,sample_0023,0.0,1.73,1.73,
+AG08,Saint Philip,sample_0024,0.0,1.82,1.82,
+AG08,Saint Philip,sample_0025,27.07,30.6,3.53,13.05
+AG08,Saint Philip,sample_0026,33.37,36.16,2.8,8.38
+AG08,Saint Philip,sample_0027,61.64,69.41,7.78,12.62
+AG08,Saint Philip,sample_0028,25.49,34.08,8.59,33.72
+AG08,Saint Philip,sample_0029,27.06,29.13,2.08,7.67
+AG08,Saint Philip,sample_0030,8.65,11.89,3.24,37.46
+AG08,Saint Philip,sample_0031,18.25,21.91,3.66,20.02
+AG08,Saint Philip,sample_0032,0.0,0.8,0.8,
+AG08,Saint Philip,sample_0033,0.0,0.83,0.83,
+AG08,Saint Philip,sample_0034,2.7,4.71,2.02,74.66
+AG08,Saint Philip,sample_0035,46.72,50.0,3.27,7.0
+AG08,Saint Philip,sample_0036,109.8,113.19,3.4,3.09
+AG08,Saint Philip,sample_0037,1.61,1.21,-0.4,-24.7
+AG08,Saint Philip,sample_0038,115.1,117.77,2.66,2.31
+AG08,Saint Philip,sample_0039,76.71,86.42,9.71,12.66
+AG08,Saint Philip,sample_0040,102.25,105.7,3.45,3.38
+AG08,Saint Philip,sample_0041,1.86,1.61,-0.26,-13.87
+AG08,Saint Philip,sample_0042,98.66,99.98,1.31,1.33
+AG08,Saint Philip,sample_0043,80.8,84.29,3.49,4.32
+AG08,Saint Philip,sample_0044,109.49,120.57,11.09,10.13
+AG08,Saint Philip,sample_0045,85.86,89.45,3.58,4.17
+AG08,Saint Philip,sample_0046,0.0,0.38,0.38,
+AG08,Saint Philip,sample_0047,124.71,130.71,6.0,4.81
+AG08,Saint Philip,sample_0048,67.63,71.69,4.06,6.0
+AG08,Saint Philip,sample_0049,104.19,114.14,9.95,9.55
+AG08,Saint Philip,sample_0050,72.83,75.49,2.66,3.65
+AG08,Saint Philip,sample_0051,239.12,244.45,5.33,2.23
+AG08,Saint Philip,sample_0052,86.09,102.34,16.26,18.89
+AG08,Saint Philip,sample_0053,140.72,148.1,7.38,5.24
+AG08,Saint Philip,sample_0054,95.85,103.74,7.9,8.24
+AG08,Saint Philip,sample_0055,104.43,111.35,6.92,6.62
+AG08,Saint Philip,sample_0056,177.98,181.6,3.62,2.03
+AG08,Saint Philip,sample_0057,151.65,157.47,5.83,3.84
+AG08,Saint Philip,sample_0058,87.76,90.78,3.02,3.44
+AG08,Saint Philip,sample_0059,82.55,93.37,10.83,13.11
+AG08,Saint Philip,sample_0060,98.6,105.16,6.56,6.65
+AG08,Saint Philip,sample_0061,97.71,98.92,1.21,1.23
+AG08,Saint Philip,sample_0062,122.47,129.73,7.26,5.92
+AG08,Saint Philip,sample_0063,131.32,131.12,-0.2,-0.15
+AG08,Saint Philip,sample_0064,4.68,5.7,1.02,21.77
+AG08,Saint Philip,sample_0065,194.98,202.03,7.05,3.62
+AG08,Saint Philip,sample_0066,149.33,156.21,6.88,4.61
+AG08,Saint Philip,sample_0067,163.41,167.06,3.65,2.24
+AG08,Saint Philip,sample_0068,101.61,103.93,2.32,2.28
+AG08,Saint Philip,sample_0069,205.47,207.42,1.95,0.95
+AG08,Saint Philip,sample_0070,167.51,171.88,4.37,2.61
+AG08,Saint Philip,sample_0071,139.02,139.07,0.05,0.03
+AG08,Saint Philip,sample_0072,0.36,2.34,1.98,552.21
+AG08,Saint Philip,sample_0073,151.4,159.11,7.71,5.1
+AG08,Saint Philip,sample_0074,204.26,209.66,5.4,2.64
+AG08,Saint Philip,sample_0075,170.33,180.34,10.01,5.88
+AG08,Saint Philip,sample_0076,226.78,231.35,4.57,2.02
+AG08,Saint Philip,sample_0077,203.54,206.72,3.18,1.56
+AG08,Saint Philip,sample_0078,235.04,238.01,2.97,1.26
+AG08,Saint Philip,sample_0079,150.92,156.72,5.8,3.84
+AG08,Saint Philip,sample_0080,238.16,238.95,0.8,0.33
+AG08,Saint Philip,sample_0081,254.66,255.34,0.68,0.27
+AG08,Saint Philip,sample_0082,226.84,233.47,6.63,2.92
+AG08,Saint Philip,sample_0083,167.63,171.44,3.81,2.27
+AG08,Saint Philip,sample_0084,289.77,294.55,4.78,1.65
+AG08,Saint Philip,sample_0085,151.12,159.95,8.84,5.85
+AG08,Saint Philip,sample_0086,180.45,188.87,8.41,4.66
+AG08,Saint Philip,sample_0087,202.69,208.95,6.26,3.09
+AG08,Saint Philip,sample_0088,214.98,219.95,4.97,2.31
+AG08,Saint Philip,sample_0089,190.3,200.98,10.67,5.61
+AG08,Saint Philip,sample_0090,276.56,281.12,4.55,1.65
+AG08,Saint Philip,sample_0091,234.03,236.02,1.99,0.85
+AG08,Saint Philip,sample_0092,240.22,249.52,9.3,3.87
+AG08,Saint Philip,sample_0093,270.1,272.73,2.64,0.98
+AG08,Saint Philip,sample_0094,156.6,161.33,4.73,3.02
+AG08,Saint Philip,sample_0095,214.14,218.43,4.29,2.0
+AG08,Saint Philip,sample_0096,147.43,150.37,2.93,1.99
+AG08,Saint Philip,sample_0097,345.17,346.79,1.62,0.47
+AG08,Saint Philip,sample_0098,255.82,259.55,3.73,1.46
+AG08,Saint Philip,sample_0099,227.43,229.31,1.89,0.83
+AG08,Saint Philip,sample_0100,227.05,234.61,7.56,3.33
+AG08,Saint Philip,sample_0101,213.88,217.27,3.39,1.59
+AG08,Saint Philip,sample_0102,228.06,236.34,8.28,3.63
+AG08,Saint Philip,sample_0103,221.13,236.98,15.85,7.17
+AG08,Saint Philip,sample_0104,223.51,224.07,0.56,0.25
+AG08,Saint Philip,sample_0105,0.0,1.44,1.44,
+AG08,Saint Philip,sample_0106,162.67,170.14,7.47,4.59
+AG08,Saint Philip,sample_0107,176.66,184.37,7.71,4.36
+AG08,Saint Philip,sample_0108,125.44,133.77,8.33,6.64
+AG08,Saint Philip,sample_0109,240.26,252.09,11.83,4.92
+AG08,Saint Philip,sample_0110,121.22,128.91,7.69,6.35
+AG08,Saint Philip,sample_0111,259.82,264.96,5.14,1.98
+AG08,Saint Philip,sample_0112,322.77,326.38,3.61,1.12
+AG08,Saint Philip,sample_0113,155.33,161.14,5.82,3.75
+AG08,Saint Philip,sample_0114,250.3,255.25,4.95,1.98
+AG08,Saint Philip,sample_0115,209.35,221.79,12.45,5.95
+AG08,Saint Philip,sample_0116,262.66,268.86,6.2,2.36
+AG08,Saint Philip,sample_0117,224.01,234.42,10.42,4.65
+AG08,Saint Philip,sample_0118,294.87,299.66,4.79,1.62
+AG08,Saint Philip,sample_0119,305.17,311.35,6.18,2.02
+AG08,Saint Philip,sample_0120,311.44,326.85,15.42,4.95
+AG08,Saint Philip,sample_0121,247.55,252.84,5.28,2.13
+AG08,Saint Philip,sample_0122,390.35,396.05,5.7,1.46
+AG08,Saint Philip,sample_0123,372.28,376.59,4.31,1.16
+AG08,Saint Philip,sample_0124,372.04,377.9,5.86,1.57
+AG08,Saint Philip,sample_0125,145.66,157.6,11.93,8.19
+AG08,Saint Philip,sample_0126,295.07,303.21,8.15,2.76
+AG08,Saint Philip,sample_0127,304.75,305.92,1.17,0.38
+AG08,Saint Philip,sample_0128,289.68,296.53,6.86,2.37
+AG08,Saint Philip,sample_0129,326.68,335.4,8.71,2.67
+AG08,Saint Philip,sample_0130,382.95,385.78,2.83,0.74
+AG08,Saint Philip,sample_0131,307.34,309.8,2.46,0.8
+AG08,Saint Philip,sample_0132,446.88,448.24,1.37,0.31
+AG08,Saint Philip,sample_0133,338.49,342.0,3.51,1.04
+AG08,Saint Philip,sample_0134,298.26,301.76,3.5,1.17
+AG08,Saint Philip,sample_0135,272.75,277.78,5.04,1.85
+AG08,Saint Philip,sample_0136,350.9,361.15,10.25,2.92
+AG08,Saint Philip,sample_0137,256.25,260.81,4.55,1.78
+AG08,Saint Philip,sample_0138,354.13,359.45,5.31,1.5
+AG08,Saint Philip,sample_0139,272.66,282.66,10.0,3.67
+AG08,Saint Philip,sample_0140,371.69,377.14,5.46,1.47
+AG08,Saint Philip,sample_0141,389.79,395.44,5.66,1.45
+AG08,Saint Philip,sample_0142,354.74,357.54,2.8,0.79
+AG08,Saint Philip,sample_0143,354.53,359.89,5.36,1.51
+AG08,Saint Philip,sample_0144,361.52,368.21,6.68,1.85
+AG08,Saint Philip,sample_0145,404.68,410.07,5.38,1.33
+AG08,Saint Philip,sample_0146,608.33,612.62,4.29,0.7
+AG08,Saint Philip,sample_0147,302.38,304.44,2.06,0.68
+AG08,Saint Philip,sample_0148,539.39,535.24,-4.15,-0.77
+AG08,Saint Philip,sample_0149,274.52,283.81,9.29,3.38
+AG08,Saint Philip,sample_0150,483.11,487.21,4.1,0.85
+AG08,Saint Philip,sample_0151,364.21,374.48,10.28,2.82
+AG08,Saint Philip,sample_0152,346.91,352.41,5.5,1.58
+AG08,Saint Philip,sample_0153,379.83,384.41,4.58,1.21
+AG08,Saint Philip,sample_0154,392.89,397.3,4.41,1.12
+AG08,Saint Philip,sample_0155,494.96,499.54,4.58,0.93
+AG08,Saint Philip,sample_0156,534.82,539.63,4.81,0.9
+AG08,Saint Philip,sample_0157,322.31,333.83,11.52,3.57
+AG08,Saint Philip,sample_0158,539.12,540.46,1.34,0.25
+AG08,Saint Philip,sample_0159,610.97,614.18,3.22,0.53
+AG08,Saint Philip,sample_0160,471.88,477.58,5.7,1.21
+AG08,Saint Philip,sample_0161,433.13,442.8,9.67,2.23
+AG08,Saint Philip,sample_0162,432.82,442.39,9.57,2.21
+AG08,Saint Philip,sample_0163,324.22,326.86,2.64,0.82
+AG08,Saint Philip,sample_0164,595.9,599.5,3.6,0.6
+AG08,Saint Philip,sample_0165,360.9,358.87,-2.02,-0.56
+AG08,Saint Philip,sample_0166,505.66,501.7,-3.96,-0.78
+AG08,Saint Philip,sample_0167,424.57,425.78,1.21,0.28
+AG08,Saint Philip,sample_0168,533.9,535.89,2.0,0.37
+AG08,Saint Philip,sample_0169,474.07,478.95,4.88,1.03
+AG08,Saint Philip,sample_0170,548.92,547.97,-0.95,-0.17
+AG08,Saint Philip,sample_0171,394.02,399.3,5.28,1.34
+AG08,Saint Philip,sample_0172,509.54,511.15,1.61,0.32
+AG08,Saint Philip,sample_0173,325.42,328.74,3.31,1.02
+AG08,Saint Philip,sample_0174,591.76,594.34,2.59,0.44
+AG08,Saint Philip,sample_0175,612.91,618.29,5.39,0.88
+AG08,Saint Philip,sample_0176,665.47,669.3,3.83,0.58
+AG08,Saint Philip,sample_0177,504.83,506.4,1.57,0.31
+AG08,Saint Philip,sample_0178,603.2,606.92,3.72,0.62
+AG08,Saint Philip,sample_0179,526.69,526.36,-0.33,-0.06
+AG08,Saint Philip,sample_0180,574.92,579.68,4.76,0.83
+AG08,Saint Philip,sample_0181,429.5,431.77,2.26,0.53
+AG08,Saint Philip,sample_0182,620.16,621.53,1.37,0.22
+AG08,Saint Philip,sample_0183,488.51,487.68,-0.83,-0.17
+AG08,Saint Philip,sample_0184,645.49,653.54,8.05,1.25
+AG08,Saint Philip,sample_0185,483.74,485.62,1.88,0.39
+AG08,Saint Philip,sample_0186,562.45,565.81,3.36,0.6
+AG08,Saint Philip,sample_0187,454.22,457.03,2.81,0.62
+AG08,Saint Philip,sample_0188,696.61,701.01,4.4,0.63
+AG08,Saint Philip,sample_0189,614.93,619.34,4.4,0.72
+AG08,Saint Philip,sample_0190,615.44,615.55,0.12,0.02
+AG08,Saint Philip,sample_0191,461.79,465.79,4.0,0.87
+AG08,Saint Philip,sample_0192,712.77,711.71,-1.06,-0.15
+AG08,Saint Philip,sample_0193,567.63,565.55,-2.08,-0.37
+AG08,Saint Philip,sample_0194,708.58,707.95,-0.63,-0.09
+AG08,Saint Philip,sample_0195,1024.16,1024.85,0.69,0.07
+AG08,Saint Philip,sample_0196,920.58,922.5,1.92,0.21
+AG08,Saint Philip,sample_0197,939.05,939.15,0.1,0.01
+AG08,Saint Philip,sample_0198,902.16,903.16,1.0,0.11
+AG08,Saint Philip,sample_0199,893.51,896.47,2.95,0.33
+AG08,Saint Philip,sample_0200,965.81,967.96,2.15,0.22

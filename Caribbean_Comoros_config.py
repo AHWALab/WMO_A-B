@@ -1,0 +1,449 @@
+domain = "Caribbean_Comoros"
+subdomain = "Regional"
+# Console logging for operators vs developers:
+#   "user"  = simplified progress (default)
+#   "debug" = full developer diagnostics
+# Override anytime:  export TITO_CONSOLE_VERBOSITY=debug
+#               or:  python orchestrator.py … --debug-console
+console_verbosity = "user"
+model_resolution = "30m"
+# Per-region resolution overrides.
+# Barbados uses 30m (higher-res DEM, FAC, FDIR, CREST, KW parameter sets).
+# Guatemala 900m example: region_resolution_map = {"Guatemala": "900m"}
+# Switching resolution auto-selects:
+#   EF5_conf/basic/DEM|FAC|FDIR_{region}_{res}.tif
+#   EF5_conf/parameters/CREST|KW_{Region}_{res}/
+#   EF5_conf/templates/basin_list/{Region}_{res}_basin_new.txt
+#   EF5_conf/templates/ef5_{Region}_{res}_control_template.txt (fallback: no _{res}_)
+#   EF5_conf/states|outputs …/{region}_{res}/  (e.g. guatemala_900m)
+region_resolution_map = {"Antigua": "30m"}
+# Optional explicit control-template override (else resolution-aware auto-select):
+# region_template_map = {"Antigua": "ef5_Antigua_30m_control_template.txt"}
+regions_to_run = ["Antigua"]
+systemModel = "crest"
+systemTimestep = 60 #in minutes
+
+# Coordinates used for generating QPF files and for clipping SCaMPR GeoTIFFs.
+# Use the tightest box that covers ALL regions you are running.
+# Shared IMERG/SCaMPR/GFS clip for all five regions (StormLab still uses
+# its own per-domain yaml: lesserantilles / barbados / guatemala / haiti / comoros).
+#   Guatemala ~-92, Haiti ~-73, Antigua ~-62, Barbados ~-60, Comoros ~44 E / -12 S
+xmin = -95.0
+xmax = 45.0
+ymin = -12.5
+ymax = 24.0
+systemName = systemModel.upper() + " " + domain.upper() + " " + subdomain.upper()
+# ── EF5 container configuration ─────────────────────────────────────────────
+# Docker partners:   EF5_RUNTIME=docker  → ef5-container image via docker.sock
+# Apptainer partners: EF5_RUNTIME=local → glibc binary EF5/bin/ef5 (NO nesting)
+# Host SIF fallback:  EF5/ef5-container.sif when Apptainer is available on host
+import os as _os
+_ef5_rt = _os.environ.get("EF5_RUNTIME", "").strip().lower()
+if _ef5_rt == "docker":
+    ef5Path = _os.environ.get("EF5_IMAGE", "ef5-container:latest")
+elif _ef5_rt in ("local", "embedded"):
+    ef5Path = _os.environ.get("EF5_LOCAL_BIN", "EF5/bin/ef5")
+else:
+    ef5Path = "EF5/ef5-container.sif"
+
+# Legacy binary paths (no longer used):
+# ef5Path = "/Dedicated/Humberto/EF5Binary/EF5V1.2.7/EF5/bin/ef5"
+# ef5Path = "/home/nammehta/EF5Master/EF5/bin/ef5"
+# EF5_conf/ holds all EF5 inputs/runtime folders (basic, params, states, precip, …).
+statesPath = "EF5_conf/states/"
+# Legacy combined precip folder (kept for backward compatibility).
+precipFolder = "EF5_conf/precip/"
+
+# Source-specific precip roots (recommended).
+# The orchestrator creates per-region subfolders inside these roots.
+imerg_precip_folder = "EF5_conf/precip/imerg/"
+hsaf_precip_folder = "EF5_conf/precip/hsaf/"
+scampr_precip_folder = "EF5_conf/precip/scampr/"  # SCaMPR — public AWS S3, no credentials needed
+precipEF5Folder = "EF5_conf/precipEF5/"
+modelStates = ["crest_SM", "kwr_IR", "kwr_pCQ", "kwr_pOQ"]
+# Required state layers EF5 must find together at one timestamp.
+# find_available_states() checks ALL of these exist (non-empty) before warm-start.
+templatePath = "EF5_conf/templates/"
+templates = "ef5_Antigua_control_template.txt"  # last-resort fallback only
+# Auto-selected per region+resolution:
+#   ef5_Guatemala_90m_control_template.txt / ef5_Guatemala_900m_control_template.txt
+basicPath = "EF5_conf/basic/"
+parametersPath = "EF5_conf/parameters/"
+dataPath = "outputs/"
+qpf_store_path = "EF5_conf/qpf_store/"
+# Note: the orchestrator writes QPF working files to per-region folders:
+# EF5_conf/qpf_store/<region>/gfs_data/ and …/wrf_data/
+tmpOutput = dataPath + "tmp_output_" + systemModel + "/"
+
+# QPE source configuration.
+# Options: "IMERG" (default), "HSAF", "SCAMPR"
+qpe_source = "IMERG"
+
+# Default QPF source for forecast control generation.
+# Options: "STORMLAB" (ensemble GFS via StormLab-GFS-realtime),
+#          "GFS", "WRF", "AROME", or a list e.g. ["GFS", "AROME"]
+qpf_source = "STORMLAB"
+
+# Optional per-region forcing override.
+# Keys are region names from regions_to_run.
+# qpe_source / qpf_source may be a string or a list. Lists are a Cartesian
+# product in operational mode, each pair with SCaMPR gap-fill:
+#   {"qpe_source": ["STREAM_SAT", "IMERG"], "qpf_source": ["STORMLAB", "AROME"]}
+#     → STREAM_SAT+SCaMPR+STORMLAB, STREAM_SAT+SCaMPR+AROME,
+#       IMERG+SCaMPR+STORMLAB, IMERG+SCaMPR+AROME
+# Values can use either qpe/qpf or qpe_source/qpf_source keys.
+# Example:
+# region_forcing_map = {
+    # Operational pairing (QPE only — never long-range PRECIPFORECAST):
+    #   QPE:      STREAM_SAT or IMERG
+    #   Gap fill: SCaMPR (ops only; STREAM-Sat uses stream_sat_gap_fill_mode,
+    #             IMERG uses qpe_gap_fill_mode=IMERG_SCAMPR)
+    #   Forecast: STORMLAB or AROME (if both listed, STORMLAB wins)
+    #
+    # STREAM-Sat + StormLab/AROME (3-phase):
+    #   A) STREAM-Sat QPE + dry → states/stream_sat/ensS*/
+    #   B) SCaMPR gap QPE + dry → states/scampr/ensS*/  (ops only)
+    #   C) StormLab or AROME as QPE + dry (no state save)
+    #
+    # IMERG + StormLab/AROME (3-phase, same idea):
+    #   A) IMERG QPE + dry → states/imerg/<region_res>/
+    #   B) SCaMPR gap QPE + dry → states/scampr_det/<region_res>/  (ops + IMERG_SCAMPR)
+    #   C) StormLab or AROME as QPE + dry from A or B states
+    
+    # examples
+#     "Antigua":   {"qpe_source": "SCAMPR", "qpf_source": "GFS"},  # Caribbean — SCaMPR
+#     "Barbados":  {"qpe_source": "SCAMPR", "qpf_source": "GFS"},
+#     "Guatemala": {"qpe_source": "SCAMPR", "qpf_source": "GFS"},
+#     "Haiti":     {"qpe_source": "SCAMPR", "qpf_source": "GFS"},
+#     "Comoros":   {"qpe_source": "HSAF",   "qpf_source": "WRF"},  # Africa — HSAF
+# }
+region_forcing_map = {
+    "Antigua": {"qpe_source": "IMERG", "qpf_source": "AROME"},
+}
+
+# Deterministic IMERG path folders (optional overrides)
+imerg_state_folder = "EF5_conf/states/imerg/"
+# IMERG/scampr_det EF5 outs also use cycle-first layout under dataPath
+imerg_output_folder = "outputs/"
+det_scampr_state_folder = "EF5_conf/states/scampr_det/"
+det_scampr_output_folder = "outputs/"
+
+# ── STREAM-Sat gap-fill mode ───────────────────────────────────────────
+# When qpe_source == "STREAM_SAT", Phase B after STREAM-Sat:
+#
+#   "SCAMPR" / "SCAMPR_QPE" / "SCAMPR_ONLY"
+#       SCaMPR QPE fills ss_end→T; states under EF5_conf/states/scampr/ensS*/
+#
+#   "HSAF" / "HSAF_QPE"
+#       HSAF QPE fills ss_end→T; states under EF5_conf/states/hsaf/ensS*/
+#
+#   "NONE" — skip gap fill (hindcast default). Forecast warm-starts from
+#            STREAM-Sat states.
+#
+# Phase C forecast uses qpf_source (STORMLAB and/or AROME in ops).
+# AROME has no archive — hindcast with AROME in qpf_source is an error.
+stream_sat_gap_fill_mode = "NONE"  # hindcast: forecast from STREAM-Sat states
+
+# SCaMPR settings (required only when qpe_source == "SCAMPR")
+# No credentials needed — data is fetched from the public AWS S3 bucket:
+#   s3://noaa-enterprise-rainrate-pds/BLEND/RainRate-Blend-INST/
+# pip install boto3 botocore xarray rasterio  (once per environment)
+scampr_latency_minutes = 20  # expected product delay in minutes
+
+# ── Warmup configuration ───────────────────────────────────────────────────
+# When enabled, if no EF5 states exist within 48 hours of the current cycle
+# time, a warmup EF5 run is triggered BEFORE the normal operational cycle.
+# The warmup simulates from (cycle_time - warmup_days days) to
+# (cycle_time - 40 hours), saving states at the end.
+# From the next cycle onward, states should exist and warmup will be skipped.
+# This applies to BOTH hindcast and operational modes.
+
+warmup_enabled = True  # operational: spin up if no states within 48h
+
+# Duration of the warmup simulation in days.
+# The simulation starts at (cycle_time - warmup_days days) and ends at
+# (cycle_time - 40 hours), saving states at (cycle_time - 40 hours).
+# Default: 10 days if not specified.
+warmup_days = 14
+
+# Parallel IMERG download threads (warmup + get_gpm_files batch).
+# 0 / unset → auto min(16, cpu*2).  Also: export IMERG_MAX_WORKERS=16
+imerg_max_workers = 8
+
+# Per-region precipitation source for warmup runs.
+# Options: "IMERG" (default if region not listed), "HSAF"
+# Warmup precip is downloaded only for missing files (skip-existing logic).
+# Example:
+# warmup_precip_source_map = {
+#     "Antigua":   "HSAF",
+#     "Barbados":  "IMERG",
+#     "Comoros":   "HSAF",
+#     "Guatemala": "IMERG",
+#     "Haiti":     "IMERG",
+# }
+warmup_precip_source_map = {
+    "Antigua":   "IMERG",
+    "Barbados":  "IMERG",
+    "Comoros":   "IMERG",
+    "Guatemala": "IMERG",
+    "Haiti":     "IMERG",
+}
+
+# ── STREAM-Sat ensemble configuration ──────────────────────────────────────
+# Used when qpe_source == "STREAM_SAT" in region_forcing_map.
+# STREAM-Sat repo: tito_utils/qpe_utils/STREAM-Sat-realtime/
+stream_sat_ensemble_size = 10
+
+# Max concurrent EF5 containers/processes per phase (Phase A / B / C).
+#   1  = fully sequential (safest on laptops / Docker Desktop)
+#   N  = run up to N EF5 jobs at once
+#   0 / None = auto (min(n_jobs, CPU count))
+# Override: export EF5_MAX_WORKERS=2
+ef5_max_workers = 12  # 1 = sequential, N = parallel, None = all
+
+# ── Informational only (STREAM-Sat pipeline internals — do not treat as knobs) ──
+# These are passed through to STREAM-Sat run_pipeline; values below match the
+# STREAM-Sat defaults. Prefer changing STREAM-Sat's own config if needed.
+stream_sat_window_hours = 48        # operational window (h) — STREAM-Sat controlled
+# Delete STREAM-Sat NC + GeoTIFF products older than this many hours before
+# the cycle time (keeps disk use bounded on Windows Docker / USB runs).
+stream_sat_keep_hours = 48
+stream_sat_warmup_hours = 12        # AR(1) warm-up (h) — STREAM-Sat controlled
+
+# Where STREAM-Sat GeoTIFFs (one folder per member) are written.
+# The orchestrator appends the domain name automatically:
+#   EF5_conf/precip/stream_sat/caribbean/ensP1/, ensP2/, ...  (Caribbean regions)
+#   EF5_conf/precip/stream_sat/comoros/ensP1/, ensP2/, ...    (Comoros)
+# This keeps Caribbean and Comoros precip isolated.
+stream_sat_precip_folder = "EF5_conf/precip/stream_sat/"
+
+# Where STREAM-Sat ensemble outputs are written.
+# Cycle-first EF5 outputs (all products):
+#   outputs/<cycle>/<region_res>/<product>/[ensOut…]/
+#   e.g. outputs/20230621.070000/guatemala_90m/stream_sat/ensOut1/
+#        outputs/20230621.070000/guatemala_90m/stormlab/ensOut1_sl2/
+# Legacy path knobs kept for back-compat; layout is driven by builders.
+stream_sat_output_folder = "outputs/"
+
+# Where STREAM-Sat ensemble states are saved per member.
+# Each member gets: EF5_conf/states/stream_sat/ensS1/<region>_<resolution>/
+stream_sat_state_folder = "EF5_conf/states/stream_sat/"
+
+# Phase B gap-fill states / outputs (separate from STREAM-Sat).
+# Each STREAM-Sat member gets: EF5_conf/states/scampr/ensS1/<region>_<resolution>/
+scampr_state_folder = "EF5_conf/states/scampr/"
+scampr_output_folder = "outputs/"
+hsaf_state_folder = "EF5_conf/states/hsaf/"
+hsaf_output_folder = "outputs/"
+
+# STREAM-Sat GeoTIFF naming convention (EF5 forcing name pattern).
+# Files are named: streamsat.qpe.YYYYMMDDHHUU.mmhInst.tif
+# Unit: mm/h (native, no conversion needed — EF5 supports mm/h)
+stream_sat_tif_naming = "streamsat"
+
+# Max parallel workers for STREAM-Sat NC→TIF conversion.
+# None → auto-detect (CPU count).
+stream_sat_max_workers = None
+
+# Timeout (seconds) for the STREAM-Sat pipeline subprocess.
+stream_sat_pipeline_timeout = 7200  # 2 hours
+
+# ── StormLab-GFS ensemble QPF ──────────────────────────────────────────
+# Repo: tito_utils/qpf_utils/StormLab-GFS-realtime/
+# NC outputs: …/StormLab-GFS-realtime/output/<domain>/qpf_ens_<domain>_<cyc>.nc
+# GeoTIFFs:   EF5_conf/precip/stormlab/<region|domain>/ensQ1/… stormlab.YYYYMMDDHH00.tif
+# EF5 outs:   outputs/<cycle>/<rkey>/stormlab/ensOut{SS}_sl{SL}/
+#
+# TITO region → StormLab domain:
+#   Antigua→lesserantilles, Barbados→barbados, Guatemala→guatemala,
+#   Haiti→haiti, Comoros→comoros
+stormlab_repo = "tito_utils/qpf_utils/StormLab-GFS-realtime"
+stormlab_nc_root = "tito_utils/qpf_utils/StormLab-GFS-realtime/output"
+stormlab_precip_folder = "EF5_conf/precip/stormlab/"
+stormlab_output_folder = "outputs/"
+# StormLab defaults if CLI flags omitted (from config/<domain>.yaml):
+#   forecast.n_members = 50
+#   forecast.operational_forcing_members = 5
+#     → 5 GEFS forcings × 10 seeds = 50 members
+# Pass stormlab_ensemble_size / stormlab_forcing_members to override.
+stormlab_ensemble_size = 5
+stormlab_forcing_members = 5
+# Note: with STREAM_SAT + STORMLAB hindcast, EF5 Phase C = stream_sat_ensemble_size × stormlab_ensemble_size jobs
+stormlab_run_pipeline = True     # False → convert existing NC only (no StormLab run)
+stormlab_source = "auto"         # auto (GEFS→GFS fallback) | gefs | gfs
+stormlab_min_age_h = 5.0         # GEFS latency gate (same as StormLab latest_cycle)
+stormlab_pipeline_timeout = 14400
+stormlab_tif_naming = "stormlab"
+
+#Alerts configuration
+SEND_ALERTS = False
+smtp_server = "smtp.gmail.com"
+smtp_port = 587
+account_address = "model_alerts@gmail.com"
+account_password = "supersecurepassword9000"
+alert_sender = "Real Time Model Alert" # can also be the same as account_address
+alert_recipients = ["fixer1@company.com", "fixer2@company.com", "panic@company.com",...]
+copyToWeb = False
+
+#Simulation times 
+"""
+- **HindCastMode:** If you are running an event that happened in the PAST, set `HindCastMode = True` and write the date of interest in `HindCastDate`, use the format "YYYY-MM-DD HH:MM". If you want to run it in operational mode (meaning TITO will start running in the present time) set `HindCastMode = False`.
+
+- **HindCastEndDate:** When `HindCastMode = True`, set `HindCastEndDate` to run multiple hourly cycles from `HindCastDate` → `HindCastEndDate`. Leave as empty string "" for a single-cycle hindcast.
+
+If Hindcast and LR_mode is True LR_timestep,GFS_archive_path
+If running in operational mode (Hindcast False) and LR_mode = True, user only have to define LR_timestep, GFS_archive_path
+"""
+HindCastMode = False
+# Hindcast start time (used when HindCastMode=True)
+HindCastDate = "2025-10-10 01:00"
+        
+# Hindcast end time (optional; if set, runs hourly from HindCastDate → HindCastEndDate)
+# Leave as empty string "" for single-cycle hindcast.
+HindCastEndDate = "2025-10-10 01:00"
+
+run_LR = True
+LR_timestep = "60u"
+QPF_archive_path = "EF5_conf/qpf_store/archive/"  # legacy; kept for back-compat
+
+# Deterministic IMERG path (when qpe_source=IMERG):
+#   "IMERG_ONLY"   — Phase A only (+ Phase C forecast QPE if run_LR)
+#   "IMERG_SCAMPR" — ops: A + SCaMPR gap (B) + StormLab/AROME-as-QPE (C); hindcast skips B
+# Never uses EF5 long-range / PRECIPFORECAST — forecast products are QPE only.
+qpe_gap_fill_mode = "IMERG_SCAMPR"  # ops: SCaMPR gap then forecast as QPE
+
+# Dry-run tail (no precip): extend EF5 TIME_END by this many hours after
+# each phase window.  Missing precip → EF5 zeros.
+#   Phase A IMERG / STREAM-Sat: TIME_END = qpe_end + dry; TIME_STATE = qpe_end
+#   Phase B SCaMPR gap:         TIME_END = T + dry;       TIME_STATE = T
+#   Phase C GFS/StormLab QPE:   TIME_END = T+24h + dry;   no TIME_STATE
+# Set 0 to disable.
+dry_run_hours = 6
+
+# ── FIM (Flood Inundation Mapping) ─────────────────────────────────────────
+# Runs ONLY after the forecast EF5 phase (Phase C: GFS or StormLab as QPE),
+# never after IMERG/STREAM-Sat/warmup alone.
+# Eligible: 90m (Guatemala/Haiti/Comoros) and 30m (Antigua, Barbados). Skip 900m.
+#
+# Pluvial rain total = sum of qpeaccum grids (no qpfaccum / long-range):
+#   STREAM-Sat + StormLab → SS qpeaccum + StormLab qpeaccum
+#   IMERG + GFS           → IMERG qpeaccum + (SCaMPR gap if ops) + GFS qpeaccum
+# Site YAMLs: fim_config/<Region>*.yaml  (rain_components list)
+#
+#   fim_enabled = True/False
+# Before first use: python fim_store/unzip_stores.py
+fim_enabled = True
+fim_config_dir = "fim_config"
+# fim_root = ""
+
+# Per-region FIM switches and USER depth thresholds (since v0.5). This block
+# is the only place operators touch. enabled: master switch for ALL of the
+# region's sites at once (Antigua has 7 per-unit sites, Barbados 11; one
+# switch covers them all). thresholds_m: depth thresholds in METERS for all
+# products of the region, any number of values; they OVERRIDE the
+# thresholds_m in the site YAMLs. Set thresholds_m to None to keep the site
+# YAML values. A region missing from this dict simply follows its site YAMLs.
+#
+# Stores live under fim_store/<Region>/ as plain zip files (no LFS).
+# One-time step after every clone or pull that brings a new store:
+#   python fim_store/unzip_stores.py
+fim_default_thresholds_m = [0.10, 0.30, 0.70, 1.00]
+fim_regions = {
+    "Guatemala": {"enabled": True,  "thresholds_m": fim_default_thresholds_m},  # Santa Ines Petapa and Morales READY, both pluvial + fluvial
+    "Antigua":   {"enabled": True,  "thresholds_m": fim_default_thresholds_m},  # Antigua and Barbuda, 7 ADM1 unit stores READY
+    "Barbados":  {"enabled": True,  "thresholds_m": fim_default_thresholds_m},  # 11 parish stores READY, real RainyDay rain since v1.7.0
+    "Comoros":   {"enabled": True,  "thresholds_m": fim_default_thresholds_m},  # 55 ADM3 municipality stores READY (3 islands), pluvial
+    "Haiti":     {"enabled": True,  "thresholds_m": fim_default_thresholds_m},  # Riviere Grise and La Quinte READY, pluvial + fluvial
+}
+
+# ── IBF (Impact Based Forecasting receptor products) ───────────────────────
+# Runs right after FIM inside STEP 8, one site at a time, and consumes the
+# probability rasters FIM just wrote for that cycle. Chained but never
+# required: any IBF problem is logged and the cycle continues with the EF5
+# and FIM products intact.
+#
+# A site gets IBF when BOTH are true:
+#   1. ibf_enabled = True and its region is not switched off in ibf_regions
+#   2. fim_config/ibf/<Site>_ibf.yaml exists (receptor sources, work CRS,
+#      output naming). No YAML means no IBF for that site.
+#
+# The receptor preload (Overture buildings and roads, admin census layer,
+# GHS BUILT-C raster) ships separately from git because of its size. Put it
+# where the site YAML points (default: ../IBFv10_Guatemala/input_data/
+# next to the repo) or edit the YAML paths. The first cycle on a machine
+# builds a clipped receptor cache under outputs/ibf_cache; later cycles
+# reuse it and finish in seconds.
+#
+# Per region: enabled switch plus the USER thresholds. Values set here
+# OVERRIDE the site YAML; remove a key (or set it to None) to keep the
+# YAML value. A region missing from ibf_regions follows its YAMLs, the same
+# rule as fim_regions.
+#   severity_thresholds_m  water depth (m) behind each severity class of
+#                          the flood risk matrix (minor, significant,
+#                          severe). PROJECT DEFAULT, same for every
+#                          country: 0.10 / 0.30 / 0.70, the first three
+#                          FIM depth thresholds, so every severity class
+#                          is served by an exact probability product (the
+#                          fourth FIM product, 1.00 m, is still sampled
+#                          onto every receptor as its own p_ge column).
+#   hazard_flag_cutoff     likelihood (exceedance probability) that flags a
+#                          receptor as affected. USER DEFAULT: 0.50, that
+#                          is 50 percent. The IBFv1.0 reference runs for
+#                          Guatemala used 0.30; set 0.30 to reproduce them.
+#   reporting_threshold    probabilities below this are treated as zero
+#
+# Static receptor data: Antigua and Barbuda and Barbados ship IN the repo
+# under ibf_data/<Country>/ (Overture buildings and roads, admin census
+# population, GHS BUILT-C classes), nothing to download. Guatemala still
+# uses the external IBFv10_Guatemala package next to the repo.
+ibf_enabled = True
+ibf_regions = {
+    "Guatemala": {
+        "enabled": True,
+        # same defaults as every country; the IBF team's legacy rasters
+        # used 0.76 m for severe, set it back only to reproduce IBFv1.0
+        "severity_thresholds_m": {"minor": 0.10, "significant": 0.30, "severe": 0.70},
+        "hazard_flag_cutoff": 0.50,   # user default; IBFv1.0 reference used 0.30
+        "reporting_threshold": 0.05,
+    },
+    "Antigua": {                      # Antigua and Barbuda, 7 unit sites
+        "enabled": True,
+        "severity_thresholds_m": {"minor": 0.10, "significant": 0.30, "severe": 0.70},
+        "hazard_flag_cutoff": 0.50,
+        "reporting_threshold": 0.05,
+    },
+    "Barbados": {                     # 11 parish sites
+        "enabled": True,
+        "severity_thresholds_m": {"minor": 0.10, "significant": 0.30, "severe": 0.70},
+        "hazard_flag_cutoff": 0.50,
+        "reporting_threshold": 0.05,
+    },
+    "Comoros":  {"enabled": False},   # FIM is on, IBF waits for receptor data
+    "Haiti":    {"enabled": False},   # FIM is on, IBF waits for receptor data
+}
+
+# WRF configuration (used when run_LR=True).
+# Set WRF_archive_path to the folder containing WRF netCDF files.
+# Leave empty ("") to skip WRF and fall back directly to GFS.
+WRF_archive_path = ""                               # e.g. "/data/wrf_output/"
+WRF_var_name = "PREC_ACC_C"                         # precipitation variable name in WRF netCDFs
+WRF_filename_template = "PREC_d01_YYYY-MM-DD_HH_mm_SS.nc"  # WRF filename pattern
+
+# GFS configuration (used when run_LR=True and WRF not available).
+# GFS tifs are stored here persistently and reused across cycles.
+# The orchestrator writes to per-region subfolders under this root.
+GFS_precip_path = "/Dedicated/Humberto/Naman/TITO_Caribbean_Comoros_VM/TITOCaribbeanAndComoros/precip/gfs"                     # persistent GFS tif archive root
+
+# AROME configuration (used when qpf_source includes "AROME").
+# AROME tifs are stored per-region under this root as a cache.
+# Domain routing is automatic: ANTIL for Caribbean, INDIEN for Comoros.
+AROME_precip_path = "EF5_conf/precip/arome/"         # persistent AROME tif cache root
+
+# Email associated to GPM account
+email_gpm = 'vrobledodelgado@uiowa.edu'
+server = 'https://jsimpsonhttps.pps.eosdis.nasa.gov/imerg/gis/early/'
+
+# HSAF credentials/settings (required only when qpe_source == "HSAF")
+hsaf_ftp_user = "naman-mehta@uiowa.edu"
+hsaf_ftp_pass = "change_me1234"
+hsaf_latency_minutes = 10

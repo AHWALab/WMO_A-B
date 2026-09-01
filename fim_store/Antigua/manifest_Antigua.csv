@@ -1,0 +1,9 @@
+pcode,name,island_model,store,n_scenarios,magnitude_min_mm,magnitude_max_mm,magnitude_source
+AG01,Barbuda,barbuda,fim_store_AG01_Barbuda_v1.zarr,200,0.0,989.9,RainyDay rain geotiffs
+AG02,Redonda,NOT COVERED,,,,,
+AG03,Saint George,antigua,fim_store_AG03_SaintGeorge_v1.zarr,200,0.0,1118.4,RainyDay rain geotiffs
+AG04,Saint John's,antigua,fim_store_AG04_SaintJohnS_v1.zarr,200,0.0,1120.0,RainyDay rain geotiffs
+AG05,Saint Mary,antigua,fim_store_AG05_SaintMary_v1.zarr,200,0.0,1108.6,RainyDay rain geotiffs
+AG06,Saint Paul,antigua,fim_store_AG06_SaintPaul_v1.zarr,200,0.0,1108.1,RainyDay rain geotiffs
+AG07,Saint Peter,antigua,fim_store_AG07_SaintPeter_v1.zarr,200,0.0,1080.5,RainyDay rain geotiffs
+AG08,Saint Philip,antigua,fim_store_AG08_SaintPhilip_v1.zarr,200,0.0,1024.9,RainyDay rain geotiffs

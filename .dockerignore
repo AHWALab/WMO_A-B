@@ -1,0 +1,70 @@
+# ── Large data (bind-mounted at runtime, NOT baked into image) ──
+EF5_conf/states/
+EF5_conf/precip/
+EF5_conf/precipEF5/
+EF5_conf/qpf_store/
+EF5_conf/pet/
+EF5_conf/basic/
+EF5_conf/parameters/
+outputs/
+logs/
+# FIM scenario store (unzipped zarr ~70MB+) — mount fim_store/ at runtime
+fim_store/**/*.zarr/
+fim_store/**/*.zarr
+fim_store/*.zarr.zip
+# EF5 image archives (loaded separately; not needed inside tito image)
+EF5/*.tar
+EF5/*.tar.gz
+EF5/*.sif
+__pycache__/
+*.pyc
+tito.sif
+*.sif
+dist/
+apptainer/
+# StormLab: code in image; heavy params/output bind-mounted via tito_utils at runtime
+tito_utils/qpf_utils/StormLab-GFS-realtime/output/
+tito_utils/qpf_utils/StormLab-GFS-realtime/WMO.zip
+tito_utils/qpf_utils/StormLab-GFS-realtime/params/
+tito_utils/qpf_utils/StormLab-GFS-realtime/**/__pycache__/
+tito_utils/qpe_utils/STREAM-Sat-realtime/**/__pycache__/
+tito_utils/qpe_utils/STREAM-Sat-realtime/extension/realtime/output/
+tito_utils/qpe_utils/STREAM-Sat-realtime/extension/realtime/state/
+tito_utils/qpe_utils/STREAM-Sat-realtime/**/*.pdf
+tito_utils/qpe_utils/STREAM-Sat-realtime/test/
+tests/
+trainings/
+*.cmd
+*.bat
+*.ps1
+
+# ── Git / IDE ──
+.git/
+.gitattributes
+.gitignore
+.git_commit_msg.txt
+.vscode/
+.idea/
+
+# ── Docker ──
+Dockerfile
+docker-compose.yml
+docker-build.sh
+.dockerignore
+
+# ── Docs ──
+docs/
+*.md
+!README.md
+
+# ── Legacy / temp ──
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ── EF5 SIF (only needed for Apptainer, not Docker mode) ──
+EF5/*.sif
+
+# ── Conda env file is NEEDED for build, do NOT ignore it ──
+# tito_env.yml is copied by the Dockerfile

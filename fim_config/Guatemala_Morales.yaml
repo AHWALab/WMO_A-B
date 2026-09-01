@@ -1,0 +1,78 @@
+# FIM site: Guatemala, Morales (Rio Motagua). ACTIVE, pluvial and fluvial.
+# ------------------------------------------------------------------------------
+# STATUS: the flood map library and both indexes are in place.
+#   store   fim_store/Guatemala/fim_store_Morales_v1.zarr.zip (split parts)
+#           200 scenarios, max depth at 1 cm precision, 5 m grid, EPSG 3857
+#   pluvial REAL RainyDay storm totals, mean of each scenario's 72 band rain
+#           geotiff over the model domain footprint (see
+#           fim_store/Guatemala/magnitudes_Morales_real.csv, column
+#           footprint_mean_mm)
+#   fluvial REAL per scenario boundary discharge, the maximum of the CREST
+#           series delivered in GUATEMALA_outputs_Q_MOTAGUA.zip
+#
+# DATA ISSUE, PLEASE READ: the delivery carries two gauges per scenario but
+# ts.cuenca_motagua_1.crest.csv has NO discharge at all in any of the 200
+# scenarios (Discharge, SM, Fast Flow and Slow Flow are nan on every row;
+# only Precip and PET are filled). That is the signature of a gauge point
+# outside the routed basin. The fluvial index therefore uses
+# cuenca_motagua_2 alone, and boundary_series below lists only that gauge:
+# listing a gauge that returns nan would make FluvialMatcher discard the
+# member with a missing_discharge flag and silently drop the fluvial map.
+# When the modelling side fixes gauge 1, add its series back below, rebuild
+# the index with both columns and this site becomes a two point match like
+# Santa Ines Petapa.
+#
+# The Guatemala basin list must write the gauge series with outputts=true so
+# the runtime member folders contain ts.cuenca_motagua_2.crest.<cycle>.csv.
+region: Guatemala_Morales
+
+outputs_root: outputs
+cycle_format: "%Y%m%d.%H%M%S"
+
+aoc_geojson: fim_config/aoc/Guatemala_Morales_aoc.geojson
+store: fim_store/Guatemala/fim_store_Morales_v1.zarr
+products_root: outputs/Guatemala/fim_Morales
+
+member:
+  template: "tmp_output_crest_scampr_{qpf}"
+
+trigger:
+  threshold: 1.0
+  sources:
+    - template: "tmp_output_crest_scampr_{qpf}"
+    - template: "tmp_output_crest_imerg"
+
+hazards:
+  pluvial:
+    enabled: true
+    grid: qpe_accum
+    band: [0.9, 1.2]
+    band_wide: [0.8, 1.3]
+  fluvial:
+    enabled: true
+    stat: max
+    method: standardized
+    boundary_series:
+      # only the gauge that carries data; see the note at the top
+      - "ts.cuenca_motagua_2.crest.{cycle}.csv"
+
+# USER INPUT: depth thresholds in meters.
+# NOTE: in orchestrated runs the fim_regions block in
+# Caribbean_Comoros_config.py OVERRIDES this thresholds list.
+thresholds_m: [0.10, 0.30, 0.70, 1.00]
+
+overbank:
+  enabled: true
+  # sample_0002 is the zero rain scenario of the library: its map holds the
+  # permanent channel water only, which is exactly the overbank reference
+  reference_scenario: sample_0002
+
+sampling:
+  expand_steps_km: [0, 2, 5, 10, 15]
+  min_valid_cells: 50
+
+likelihood_bands:
+  very_low: [0.0, 0.2]
+  low: [0.2, 0.4]
+  medium: [0.4, 0.6]
+  high: [0.6, 1.01]

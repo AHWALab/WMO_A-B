@@ -1,0 +1,53 @@
+{
+  "country": "Barbados",
+  "sources": {
+    "admin": {
+      "boundaries": "brb_admbnda_adm1_2019.shp (COD-AB 2019)",
+      "population_csv": "population_adm1_Barbados.csv"
+    },
+    "overture": {
+      "release": "Overture Maps (overturemaps package download)",
+      "bbox": [
+        -59.7,
+        13.02,
+        -59.38,
+        13.35
+      ]
+    },
+    "land_use": {
+      "product": "GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10 V1-0",
+      "tile_zips": [
+        "GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10_V1_0_R8_C13.zip",
+        "GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10_V1_0_R8_C12.zip"
+      ]
+    }
+  },
+  "counts": {
+    "adm1_units": 11,
+    "population_total": 269090.0,
+    "buildings": 204764,
+    "buildings_with_subtype": 5799,
+    "road_segments": 31312,
+    "road_class_top": {
+      "residential": 17058,
+      "service": 5349,
+      "track": 1926,
+      "tertiary": 1641,
+      "primary": 1399,
+      "unclassified": 1056,
+      "secondary": 1033,
+      "footway": 857
+    },
+    "ghs_value_histogram": {
+      "0": 4015245,
+      "1": 1366311,
+      "2": 23826,
+      "255": 3563946
+    }
+  },
+  "files": {
+    "Barbados_adm1_population.gpkg": 155648,
+    "barbados_overture_bld_rds.gpkg": 65904640,
+    "Barbados_GHS_BUILT_C_FUN_E2018_R2023A_54009_10.tif": 229964
+  }
+}

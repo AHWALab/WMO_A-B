@@ -1,0 +1,57 @@
+# FIM site: Antigua, Saint John's (AG04). Pluvial only, per ADM1 unit.
+# Cycle-first EF5 layout (orchestrated runs override member/rain via tito_hook).
+region: Antigua_SaintJohnS
+required_resolution: "30m"
+
+outputs_root: outputs
+cycle_format: "%Y%m%d.%H%M%S"
+
+aoc_geojson: fim_config/aoc/Antigua_AG04_SaintJohnS_aoc.geojson
+store: fim_store/Antigua/fim_store_AG04_SaintJohnS_v1.zarr
+# Overridden at runtime by tito_hook to:
+#   outputs/<cycle>/antigua_30m/fim/<chain>/
+products_root: outputs/fim/Antigua_SaintJohnS
+
+member:
+  template: "{cycle}/{rkey}/stormlab/ensOut{ens}_sl{sl}"
+
+rain_components:
+  - name: stream_sat
+    template: "{cycle}/{rkey}/stream_sat/ensOut{ens}"
+    grid: qpe_accum
+    required: true
+  - name: stormlab
+    template: "{cycle}/{rkey}/stormlab/ensOut{ens}_sl{sl}"
+    grid: qpe_accum
+    required: true
+
+trigger:
+  threshold: 1.0
+  sources:
+    - template: "{cycle}/{rkey}/stream_sat/ensOut{ens}"
+    - template: "{cycle}/{rkey}/stormlab/ensOut{ens}_sl{sl}"
+
+hazards:
+  pluvial:
+    enabled: true
+    grid: qpe_accum
+    band: [0.9, 1.2]
+    band_wide: [0.8, 1.3]
+  fluvial:
+    enabled: false
+
+thresholds_m: [0.10, 0.30, 0.70, 1.00]
+
+overbank:
+  enabled: true
+  reference_scenario: sample_0002
+
+sampling:
+  expand_steps_km: [0, 2, 5, 10, 15]
+  min_valid_cells: 25
+
+likelihood_bands:
+  very_low: [0.0, 0.2]
+  low: [0.2, 0.4]
+  medium: [0.4, 0.6]
+  high: [0.6, 1.01]

@@ -1,0 +1,17 @@
+[Gauge cuenca_laquinta_1] lon=-72.70786755758026 lat=19.479276970048122 outputts=true
+[Gauge cuenca_laquinta_2] lon=-72.64358150728549 lat=19.471053539263043 outputts=true
+[Gauge 9] cellx=2185 celly=833 outputts=false #Num Cells = 85038.000000
+[Gauge 145] cellx=2152 celly=783 outputts=false #Num Cells = 2548.000000
+
+[Gauge cuenca_griss] lon=-72.20631208429094 lat=18.509377281707565 outputts=true
+[Gauge 17] cellx=2590 celly=1778 outputts=false #Num Cells = 51660.000000
+
+[Gauge 0] cellx=2075 celly=1035 outputts=false #Num Cells = 1101752.000000
+
+[Basin 0]
+gauge=cuenca_laquinta_1
+gauge=cuenca_laquinta_2
+gauge=9
+gauge=145
+gauge=cuenca_griss
+gauge=17

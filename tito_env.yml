@@ -1,0 +1,47 @@
+# TITO ops environment (STREAM-Sat + StormLab + EF5 orchestration)
+# No PyTorch/CUDA. Avoid Qt/OpenCV/OpenVINO (pysteps noise FFT does not need them).
+name: tito_env2
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - xarray
+  - netcdf4
+  - h5py
+  - gdal
+  - libgdal-netcdf
+  - rasterio
+  - rioxarray
+  - pyproj
+  - shapely
+  # ibf_utils receptor layer (vector IO)
+  - geopandas
+  - pyogrio
+  - proj
+  # pysteps: noise FFT only in STREAM-Sat (no OpenCV features)
+  - pysteps
+  - tqdm
+  - pyyaml
+  - zarr
+  - requests
+  - beautifulsoup4
+  - boto3
+  - botocore
+  - cfgrib
+  - eccodes
+  - python-eccodes
+  - herbie-data
+  - psutil
+  - matplotlib-base
+  - pillow
+  - tifffile
+  - pip:
+      - affine
+      - click
+      - python-dateutil
+      - pytz

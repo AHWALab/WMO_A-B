@@ -1,0 +1,114 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+._*
+
+# Large binary ML/model files
+*.h5
+*.hdf5
+*.pth
+*.npy
+*.nc
+*.nc4
+# STREAM-Sat CSGD domain params are small and required at runtime
+!tito_utils/qpe_utils/STREAM-Sat-realtime/*.csgdNLWAR_DPR.nc
+*.grb
+*.grib
+*.grib2
+*.pkl
+
+# Temporary files
+*.tmp
+*.log
+temp/
+logs/
+tito_utils/qpe_utils/STREAM-Sat-realtime/tmp*/
+
+# FIM runtime products (never commit)
+outputs/fim/
+fim_out*/
+# Extracted stores — only the .zarr.zip (or .partNN) ships; unzip locally
+*.zarr/
+**/*.zarr/
+fim_store/*.zarr/
+fim_store/**/*.zarr/
+
+# Offline precip archive (large; materialize locally)
+offline_precips/**/*.tif
+offline_precips/**/*.nc
+!offline_precips/README*
+
+# Raster/binary data files — never commit these (except basic/ and parameters/)
+*.tif
+*.tiff
+*.aux.xml
+!EF5_conf/basic/**/*.tif
+!EF5_conf/basic/**/*.tiff
+!EF5_conf/parameters/**/*.tif
+!EF5_conf/parameters/**/*.tiff
+!EF5_conf/pet/**/*.tif
+!EF5_conf/pet/**/*.tiff
+!ibf_data/**/*.tif
+!ibf_data/**/*.tiff
+
+# ── Runtime data dirs: keep folder shells via .gitkeep, ignore contents ──
+EF5_conf/precip/**
+!EF5_conf/precip/.gitkeep
+EF5_conf/precipEF5/**
+!EF5_conf/precipEF5/.gitkeep
+EF5_conf/qpf_store/**
+!EF5_conf/qpf_store/.gitkeep
+EF5_conf/states/**
+!EF5_conf/states/.gitkeep
+outputs/**
+!outputs/.gitkeep
+
+# Docker image archives / partner bundle → host on Zenodo (not GitHub)
+dist/
+*.tar.gz
+
+# Container images (large) — build locally or download from Zenodo
+tito.sif
+EF5/*.sif
+EF5/*.tar
+
+# Local backup/transfer archive of the whole training dir (never commit)
+TITO_A&B_copy.zip
+
+# Nested upstream repo (StormLab under tito_utils/qpf_utils/)
+tito_utils/qpf_utils/StormLab-GFS-realtime/WMO.zip
+tito_utils/qpf_utils/StormLab-GFS-realtime/output/
+tito_utils/qpf_utils/StormLab-GFS-realtime/*/__pycache__/
+tito_utils/qpf_utils/StormLab-GFS-realtime/__pycache__/
+!tito_utils/qpf_utils/StormLab-GFS-realtime/params/**
+
+# STREAM-Sat runtime caches (regenerated each cycle)
+tito_utils/qpe_utils/STREAM-Sat-realtime/extension/realtime/state/
+tito_utils/qpe_utils/STREAM-Sat-realtime/extension/realtime/output/
+
+# Local scratch / training dumps
+trainings/
+
+# IBF static data: the GHS BUILT-C land use rasters are small and required at
+# runtime; without this line the *.tif rule above drops them silently and the
+# island population weights collapse
+!ibf_data/**/*.tif
+
+# Stores that ship as split parts: the joined <name>.zarr.zip is a local
+# by-product of fim_store/unzip_stores.py. Only the .partNN files are tracked
+# (a joined LaQuinte zip is 613 MB, far over GitHub's 100 MB hard limit)
+fim_store/Guatemala/fim_store_Morales_v1.zarr.zip
+fim_store/Haiti/fim_store_Haiti_Gris_v1.zarr.zip
+fim_store/Haiti/fim_store_Haiti_LaQuinte_v1.zarr.zip

@@ -1,0 +1,79 @@
+# FIM site: Haiti, La Quinte (Gonaives). ACTIVE, pluvial and fluvial.
+# ------------------------------------------------------------------------------
+# STATUS: rebuilt August 2026 from the second delivery. Complete and real.
+#   store    fim_store/Haiti/fim_store_Haiti_LaQuinte_v1.zarr.zip (split parts)
+#            ALL 200 scenarios, max depth at 1 cm precision (uint16
+#            centimetres in the store), 2 m grid, EPSG 32618, 3417 x 3557
+#   pluvial  REAL RainyDay storm totals, the area weighted mean of the band
+#            summed scenario rain geotiff over the model footprint
+#            (laquinta_haiti_rain_scenarios_geotiff_files.zip, 200 scenarios,
+#            72 bands), 0.00 to 1070.1 mm. Full table:
+#            fim_store/Haiti/magnitudes_LaQuinte.csv
+#   fluvial  REAL per scenario boundary discharge, the maximum of the CREST
+#            series delivered in HAITI_outputs_Q_LAQUINTA.zip (two gauges,
+#            cuenca_laquinta_1 and _2, 0 to 357 and 0 to 10558 m3/s), matched
+#            standardized nearest neighbour on both, the same two point setup
+#            as Guatemala Santa Ines Petapa
+#
+# ONE DELIVERY ODDITY: sample_0011 arrived on a 1367 x 1423 grid at 5 m
+# instead of 3417 x 3557 at 2 m. Same origin and same extent, so it is a
+# coarser rendering of the same domain rather than a different area; it is
+# resampled nearest neighbour onto the 2 m site grid and kept, and the note
+# is recorded in the store's resampling_notes attribute. It was excluded
+# outright in the previous build. Two pairs of scenarios are byte identical
+# in the delivery (0002 with 0007, and 0181 with 0182).
+#
+# The Haiti basin list must write both gauge series with outputts=true so the
+# runtime member folders contain ts.cuenca_laquinta_1.crest.<cycle>.csv and
+# ts.cuenca_laquinta_2.crest.<cycle>.csv.
+region: Haiti_LaQuinte
+
+outputs_root: outputs
+cycle_format: "%Y%m%d.%H%M%S"
+
+aoc_geojson: fim_config/aoc/Haiti_LaQuinte_aoc.geojson
+store: fim_store/Haiti/fim_store_Haiti_LaQuinte_v1.zarr
+products_root: outputs/Haiti/fim_LaQuinte
+
+member:
+  template: "tmp_output_crest_scampr_{qpf}"
+
+trigger:
+  threshold: 1.0
+  sources:
+    - template: "tmp_output_crest_scampr_{qpf}"
+    - template: "tmp_output_crest_imerg"
+
+hazards:
+  pluvial:
+    enabled: true
+    grid: qpe_accum
+    band: [0.9, 1.2]
+    band_wide: [0.8, 1.3]
+  fluvial:
+    enabled: true
+    stat: max
+    method: standardized
+    boundary_series:
+      - "ts.cuenca_laquinta_1.crest.{cycle}.csv"
+      - "ts.cuenca_laquinta_2.crest.{cycle}.csv"
+
+# USER INPUT: depth thresholds in meters.
+# NOTE: in orchestrated runs the fim_regions block in
+# Caribbean_Comoros_config.py OVERRIDES this thresholds list.
+thresholds_m: [0.10, 0.30, 0.70, 1.00]
+
+overbank:
+  enabled: true
+  # lowest rain magnitude of the library (0.00 mm), map is baseline water only
+  reference_scenario: sample_0007
+
+sampling:
+  expand_steps_km: [0, 2, 5, 10, 15]
+  min_valid_cells: 50
+
+likelihood_bands:
+  very_low: [0.0, 0.2]
+  low: [0.2, 0.4]
+  medium: [0.4, 0.6]
+  high: [0.6, 1.01]

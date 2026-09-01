@@ -1,0 +1,53 @@
+{
+  "country": "Antigua",
+  "sources": {
+    "admin": {
+      "boundaries": "atg_admbnda_adm1_2019.shp (COD-AB 2019)",
+      "population_csv": "population_adm1_Antigua.csv"
+    },
+    "overture": {
+      "release": "Overture Maps (overturemaps package download)",
+      "bbox": [
+        -62.42,
+        16.9,
+        -61.6,
+        17.8
+      ]
+    },
+    "land_use": {
+      "product": "GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10 V1-0",
+      "tile_zips": [
+        "GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10_V1_0_R7_C12.zip",
+        "GHS_BUILT_C_FUN_E2018_GLOBE_R2023A_54009_10_V1_0_R7_C13.zip"
+      ]
+    }
+  },
+  "counts": {
+    "adm1_units": 8,
+    "population_total": 94326.0,
+    "buildings": 71255,
+    "buildings_with_subtype": 1009,
+    "road_segments": 15042,
+    "road_class_top": {
+      "residential": 7634,
+      "service": 3367,
+      "track": 1286,
+      "primary": 822,
+      "tertiary": 543,
+      "path": 499,
+      "secondary": 317,
+      "footway": 273
+    },
+    "ghs_value_histogram": {
+      "0": 6137823,
+      "1": 677534,
+      "2": 7009,
+      "255": 68045532
+    }
+  },
+  "files": {
+    "Antigua_adm1_population.gpkg": 237568,
+    "antigua_overture_bld_rds.gpkg": 23535616,
+    "Antigua_GHS_BUILT_C_FUN_E2018_R2023A_54009_10.tif": 284677
+  }
+}

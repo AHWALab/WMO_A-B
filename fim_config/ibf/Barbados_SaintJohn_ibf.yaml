@@ -1,0 +1,57 @@
+# IBF receptor product: Barbados, SaintJohn (paired with the FIM site
+# Barbados_SaintJohn.yaml; same stem plus _ibf).
+#
+# Static data lives IN the repo under ibf_data/Barbados/: Overture Maps
+# buildings and roads, admin units with census population, and the GHS
+# BUILT-C functional class raster for the dasymetric weights. Nothing to
+# download before running.
+#
+# In orchestrated runs tito_hook overrides fim_products with the cycle
+# first path, and the ibf_regions block in Caribbean_Comoros_config.py
+# OVERRIDES severity_thresholds_m, hazard_flag_cutoff and
+# reporting_threshold, so operators normally edit them there.
+region: Barbados_SaintJohn
+
+receptors:
+  buildings:
+    source: ibf_data/Barbados/barbados_overture_bld_rds.gpkg
+    layer: buildings
+    id_field: id
+    subtype_field: subtype
+  roads:
+    source: ibf_data/Barbados/barbados_overture_bld_rds.gpkg
+    layer: roads
+    id_field: id
+    class_field: class
+    keep_classes: [motorway, trunk, primary, secondary, tertiary, residential, unclassified]
+  admin:
+    source: ibf_data/Barbados/Barbados_adm1_population.gpkg
+    layer: adm1
+    id_field: ADM1_PCODE
+    name_field: ADM1_EN
+    population_field: population
+  land_use:
+    source: ibf_data/Barbados/Barbados_GHS_BUILT_C_FUN_E2018_R2023A_54009_10.tif
+  work_crs: "EPSG:32621"
+  domain_buffer_m: 250
+  cache_dir: outputs/ibf_cache
+
+fim_products:
+  # manual pipeline_pf runs write outputs/Barbados/fim_BB05_SaintJohn/<cycle>/<mode>
+  root: outputs/Barbados/fim_BB05_SaintJohn/{cycle}/{mode}
+  mode: pluvial
+  prefer_overbank: false
+
+classification:
+  # User defaults for the islands: likelihood cutoff 50 percent, severity
+  # depths equal to the FIM depth thresholds of these sites (10, 30, 70 cm).
+  reporting_threshold: 0.05
+  severity_thresholds_m:
+    minor: 0.10
+    significant: 0.30
+    severe: 0.70
+  hazard_flag_cutoff: 0.50
+
+outputs:
+  root: outputs/ibf/{region}
+  append_cycle: true
